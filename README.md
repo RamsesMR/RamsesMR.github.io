@@ -6,7 +6,7 @@ proyecto-personal
 
 
 
-1.) link sitio web: https://proyecto-monchi.000webhostapp.com/
+1.) link sitio web: https://monchi-co2.000webhostapp.com/
 
 fue creado con webhost000 
 
