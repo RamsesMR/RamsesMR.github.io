@@ -1,0 +1,41 @@
+
+.footer {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-area: footer;
+    height: auto;
+    background-color: rgb(36, 36, 36);
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-rows: 100%;
+    grid-template-areas: "f-1 f-2 f-3";
+    text-align: center;
+
+
+}
+
+.f-1 {
+    display: grid;
+    grid-area: f-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-2 {
+    display: grid;
+    grid-area: f-2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-3 {
+    display: grid;
+    grid-area: f-3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

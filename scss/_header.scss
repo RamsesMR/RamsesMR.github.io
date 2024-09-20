@@ -1,0 +1,33 @@
+
+/* header */
+.header {
+
+    height: auto;
+    display: grid;
+    grid-area: header;
+    margin: 0;
+    padding: 20px;
+    background-image: url("/src/pngtree-glowing-honeycomb-on-a-sinister-carbon-fiber-backdrop-image_13903506.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100%;
+    grid-template-areas: "h-logo h-redes";
+
+    .h-logo {
+        display: grid;
+        grid-area: h-logo;
+    }
+
+    .h-redes {
+        display: grid;
+        grid-area: h-redes;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .img {
+        width: 100%;
+        height: 100%;
+    }
+}
