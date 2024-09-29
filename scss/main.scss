@@ -73,14 +73,16 @@ html {
 
 //construccion de body
 .body-incio {
-    background-color: rgb(5, 5, 5);
+    background-color: rgb(20, 20, 20);
+   
+
     width: 100%;
     height: auto;
     padding: 0;
     margin: 0;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 0.1fr 0.3fr 3.7fr 0.2fr;
+    grid-template-rows: 0.1fr 0.3fr 4.5fr 0.2fr;
     grid-template-areas:
         "nav"
         "miheader"
@@ -115,7 +117,7 @@ html {
 
 //construccion del main
 .mimain {
-
+    background-color: rgb(20, 20, 20);
     width: 100%;
     height: auto;
     display: grid;
@@ -149,6 +151,7 @@ html {
     }
 
     section {
+        
         width: 100%;
         height: auto;
         display: flex;
@@ -363,6 +366,7 @@ html {
 
 //seccion4
 .seccion4-index {
+  
     display: grid;
     grid-template-columns: 90%;
     grid-template-rows: 20% 80%;
@@ -383,9 +387,10 @@ html {
  
 
     .article1-sec4 {  
-        grid-template-columns: 33% 33% 33%;
+        gap: 20px;
+        grid-template-columns: 50%  50%;
         grid-template-rows: 100%;
-        grid-template-areas: "mapa datos formulario";
+        grid-template-areas: "mapa  formulario";
         
 
 
@@ -398,19 +403,7 @@ html {
             box-shadow: 1px 4px 8px 3px rgba(0, 0, 0, 1);
         }
 
-        .datos {
-            display: grid;
-            grid-area: datos;
-
-            color: whitesmoke;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-
-            ul {
-                list-style: none;
-            }
-        }
+        
 
         .formulario {
             display: grid;

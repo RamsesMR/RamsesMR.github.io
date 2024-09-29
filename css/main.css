@@ -25,6 +25,8 @@
   align-items: center;
 }
 .f-1 img {
+  min-width: 310px;
+  min-height: 55px;
   width: 80%;
   height: 50%;
 }
@@ -74,7 +76,7 @@
 
 .video {
   width: 100%;
-  height: 850px;
+  height: 650px;
   margin: 0;
   padding: 0;
   z-index: -1;
@@ -95,7 +97,7 @@
   justify-content: center;
   overflow: hidden;
   line-height: 8rem;
-  margin-top: 120px;
+  margin-top: 50px;
 }
 .cont-header img {
   width: 30%;
@@ -161,6 +163,8 @@
 
 /* navbar */
 .nav {
+  background-color: black;
+  min-height: 85px;
   z-index: 2;
   display: grid;
   grid-area: nav;
@@ -219,7 +223,7 @@
   display: flex;
   flex-direction: row;
   justify-content: end;
-  border-left: 1px #0E72B5 solid;
+  border-left: 1px #f29500 solid;
   position: relative;
 }
 .li ul {
@@ -248,14 +252,14 @@
 }
 
 .nosotros {
-  background-color: rgb(5, 5, 5);
-  width: 100%;
+  background-color: rgb(20, 20, 20);
+  width: auto;
   height: auto;
   padding: 0;
   margin: 0;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 0.1fr 0.3fr 1.2fr 0.2fr;
+  grid-template-rows: 0.1fr 0.3fr 1.9fr 0.2fr;
   grid-template-areas: "nav" "miheader" "mimain" "mifooter";
 }
 .nosotros .nav {
@@ -279,7 +283,7 @@
   height: auto;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 100%;
+  grid-template-rows: auto;
   grid-template-areas: "seccion1-nosotros";
 }
 .nosotros .mimain .seccion1-nosotros {
@@ -288,13 +292,13 @@
 }
 .nosotros .mimain section {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .nosotros .mimain article {
-  height: auto;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -315,12 +319,13 @@
 }
 .nosotros .art1-sec1-nosotros {
   grid-template-columns: 45% 45%;
-  grid-template-rows: 100%;
+  grid-template-rows: auto;
   grid-template-areas: "text-art1-sec1 img-art1-sec1";
 }
 .nosotros .art1-sec1-nosotros .img-art1-sec1 {
   display: grid;
   grid-area: img-art1-sec1;
+  height: 100%;
 }
 .nosotros .art1-sec1-nosotros .img-art1-sec1 img {
   width: 100%;
@@ -394,13 +399,12 @@
   height: auto;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 100%;
+  grid-template-rows: auto;
   grid-template-areas: "seccion1-contacto";
 }
 .body-contacto .main-contacto .seccion1-contacto {
   display: grid;
   grid-area: seccion1-contacto;
-  height: auto;
 }
 .body-contacto .main-contacto section {
   width: 100%;
@@ -429,7 +433,8 @@
   grid-area: art1-sec1-contacto;
 }
 .body-contacto .art1-sec1-contacto {
-  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  grid-template-columns: 45% 45%;
   grid-template-rows: 30% 60%;
   grid-template-areas: "texto  texto" "mapa  formulario";
   display: flex;
@@ -455,17 +460,6 @@
   width: 100%;
   overflow: hidden;
   box-shadow: 1px 4px 8px 3px rgb(0, 0, 0);
-}
-.body-contacto .art1-sec1-contacto .datos {
-  display: grid;
-  grid-area: datos;
-  padding: 10px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-.body-contacto .art1-sec1-contacto .datos ul {
-  list-style: none;
 }
 .body-contacto .art1-sec1-contacto .formulario {
   display: grid;
@@ -505,14 +499,14 @@ html {
 }
 
 .eventos {
-  background-color: rgb(5, 5, 5);
+  background-color: rgb(20, 20, 20);
   width: 100%;
-  height: 100%;
+  height: auto;
   padding: 0;
   margin: 0;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 0.1fr 0.3fr 2.3fr 0.2fr;
+  grid-template-rows: 0.1fr 0.3fr 3fr 0.2fr;
   grid-template-areas: "nav" "miheader" "mimain" "mifooter";
 }
 .eventos .nav {
@@ -577,14 +571,17 @@ html {
   height: auto;
   display: grid;
   grid-area: art1-sec1-eventos;
+  background-color: black;
 }
 .eventos .seccion1-eventos .art2-sec1-eventos {
+  background-color: black;
   height: auto;
   display: grid;
   grid-area: art2-sec1-eventos;
 }
 .eventos .seccion1-eventos .art1-sec1-eventos {
-  height: auto;
+  height: 100%;
+  max-height: 1800px;
   border-radius: 12px;
   border: solid 1px #f29400;
   grid-template-columns: 95%;
@@ -642,7 +639,7 @@ html {
   transform: translateY(3px);
 }
 .eventos .seccion1-eventos .art2-sec1-eventos {
-  height: auto;
+  height: 100%;
   border-radius: 12px;
   border: solid 1px #f29400;
   grid-template-columns: 95%;
@@ -707,7 +704,7 @@ html {
     height: 100%;
   }
   .body-incio {
-    background-color: rgb(5, 5, 5);
+    background-color: rgb(20, 20, 20);
     width: 100%;
     height: 100%;
     padding: 0;
@@ -997,14 +994,14 @@ html {
     background-color: #f29400;
   }
   .body-contacto {
-    background-color: rgb(5, 5, 5);
+    background-color: rgb(20, 20, 20);
     width: 100%;
     height: auto;
     padding: 0;
     margin: 0;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 0.1fr 0.2fr auto 0.2fr;
+    grid-template-rows: 0.1fr 0.2fr 3fr 0.2fr;
     grid-template-areas: "nav-movile" "miheader" "main-contacto" "mifooter";
   }
   .body-contacto .nav {
@@ -1096,14 +1093,14 @@ html {
     grid-area: formulario;
   }
   .eventos {
-    background-color: rgb(5, 5, 5);
+    background-color: rgb(20, 20, 20);
     width: 100%;
     height: auto;
     padding: 0;
     margin: 0;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 0.1fr 0.3fr 5.5fr 0.2fr;
+    grid-template-rows: 0.1fr 0.3fr 6.9fr 0.2fr;
     grid-template-areas: "nav-movile" "miheader" "mimain" "mifooter";
   }
   .eventos .nav {
@@ -1180,9 +1177,9 @@ html {
     grid-area: mifooter;
   }
   .eventos .seccion1-eventos {
-    background-color: black;
+    background-color: rgb(20, 20, 20);
     gap: 10px;
-    height: 100%;
+    height: auto;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 5% 50% 50%;
@@ -1194,17 +1191,17 @@ html {
     text-align: center;
   }
   .eventos .seccion1-eventos .art1-sec1-eventos {
-    height: auto;
+    height: 100%;
     display: grid;
     grid-area: art1-sec1-eventos;
   }
   .eventos .seccion1-eventos .art2-sec1-eventos {
-    height: auto;
+    height: 100%;
     display: grid;
     grid-area: art2-sec1-eventos;
   }
   .eventos .seccion1-eventos .art1-sec1-eventos {
-    height: auto;
+    height: 100%;
     border-radius: 12px;
     border: solid 1px #f29400;
     grid-template-columns: 95%;
@@ -1343,8 +1340,8 @@ html {
     align-items: center;
   }
   .f-1 img {
-    width: 30%;
-    height: 30%;
+    width: 100%;
+    height: auto;
   }
   .f-2 {
     display: grid;
@@ -1455,17 +1452,17 @@ html {
   .nosotros {
     background-color: rgb(5, 5, 5);
     width: 100%;
-    height: 100%;
+    height: auto;
     padding: 0;
     margin: 0;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 0.1fr 0.3fr 3fr 0.2fr;
-    grid-template-areas: "nav" "miheader" "mimain" "mifooter";
+    grid-template-rows: 0.1fr 0.3fr auto 0.2fr;
+    grid-template-areas: "nav-movile" "miheader" "mimain" "mifooter";
   }
-  .nosotros .nav {
+  .nosotros .nav-movile {
     display: grid;
-    grid-area: nav;
+    grid-area: nav-movile;
   }
   .nosotros .miheader {
     display: grid;
@@ -1485,7 +1482,7 @@ html {
     height: auto;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 1fr;
+    grid-template-rows: auto;
     grid-template-areas: "seccion1-nosotros";
   }
   .nosotros .mimain .seccion1-nosotros {
@@ -1497,8 +1494,8 @@ html {
     height: auto;
   }
   .nosotros .mimain article {
-    height: auto;
-    width: 100%;
+    height: 100%;
+    width: auto;
   }
   .nosotros .nav {
     display: none;
@@ -1535,34 +1532,46 @@ html {
   .nosotros .seccion1-nosotros {
     height: auto;
     grid-template-columns: 90%;
-    grid-template-rows: 20% 80%;
+    grid-template-rows: 0.3fr 1.2fr;
     grid-template-areas: "title-sec1-nosotros" "art1-sec1-nosotros";
   }
   .nosotros .seccion1-nosotros .title-sec1-nosotros {
     display: grid;
     grid-area: title-sec1-nosotros;
     text-align: center;
+    height: 100%;
+    align-items: center;
   }
   .nosotros .seccion1-nosotros .art1-sec1-nosotros {
     display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     grid-area: art1-sec1-nosotros;
   }
   .nosotros .art1-sec1-nosotros {
     grid-template-columns: 100%;
-    grid-template-rows: 70% 30%;
+    grid-template-rows: 70% 10%;
     grid-template-areas: "text-art1-sec1" "img-art1-sec1";
   }
   .nosotros .art1-sec1-nosotros .img-art1-sec1 {
     display: grid;
     grid-area: img-art1-sec1;
   }
+  .nosotros .art1-sec1-nosotros .img-art1-sec1 img {
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
   .nosotros .art1-sec1-nosotros .text-art1-sec1 {
     display: grid;
     grid-area: text-art1-sec1;
+    justify-content: center;
   }
 }
 .privacidad {
-  background-color: black;
+  background-color: rgb(20, 20, 20);
   width: 100%;
   height: 100%;
 }
@@ -1645,14 +1654,14 @@ html h4 {
 }
 
 .body-incio {
-  background-color: rgb(5, 5, 5);
+  background-color: rgb(20, 20, 20);
   width: 100%;
   height: auto;
   padding: 0;
   margin: 0;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 0.1fr 0.3fr 3.7fr 0.2fr;
+  grid-template-rows: 0.1fr 0.3fr 4.5fr 0.2fr;
   grid-template-areas: "nav" "miheader" "mimain" "mifooter";
 }
 
@@ -1681,6 +1690,7 @@ html h4 {
 }
 
 .mimain {
+  background-color: rgb(20, 20, 20);
   width: 100%;
   height: auto;
   display: grid;
@@ -1870,9 +1880,10 @@ html h4 {
   grid-area: article1-sec4;
 }
 .seccion4-index .article1-sec4 {
-  grid-template-columns: 33% 33% 33%;
+  gap: 20px;
+  grid-template-columns: 50% 50%;
   grid-template-rows: 100%;
-  grid-template-areas: "mapa datos formulario";
+  grid-template-areas: "mapa  formulario";
 }
 .seccion4-index .article1-sec4 .mapa {
   display: grid;
@@ -1881,17 +1892,6 @@ html h4 {
   width: 100%;
   overflow: hidden;
   box-shadow: 1px 4px 8px 3px rgb(0, 0, 0);
-}
-.seccion4-index .article1-sec4 .datos {
-  display: grid;
-  grid-area: datos;
-  color: whitesmoke;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-.seccion4-index .article1-sec4 .datos ul {
-  list-style: none;
 }
 .seccion4-index .article1-sec4 .formulario {
   display: grid;

@@ -21,12 +21,12 @@ let divCaraCruz=document.getElementById("divCaracruz");
 
 divCaraCruz.addEventListener("click", ()=>{
 
-    window.location.href = './pages/eventos/index.html';
+    window.location.href = './pages/eventos/eventos.html';
 })
 
 divCyrano.addEventListener("click", ()=>{
 
-    window.location.href = './pages/eventos/index.html';
+    window.location.href = './pages/eventos/eventos.html';
 })
 
 
@@ -47,7 +47,7 @@ window.addEventListener("load", function(){
       "message": "Utilizamos cookies para mejorar tu experiencia en nuestra web.",
       "dismiss": "Aceptar",
       "link": "Leer más",
-      "href": "/pages/politicaPrivacidad/index.html"
+      "href": "pages\politicaPrivacidad\politicaPrivacidad.html"
     }
   });
 });

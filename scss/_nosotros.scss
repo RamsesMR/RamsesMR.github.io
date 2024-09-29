@@ -1,13 +1,13 @@
 .nosotros{
     
-        background-color: rgb(5, 5, 5);
-        width: 100%;
+       background-color: rgb(20, 20, 20);
+        width:auto;
         height: auto;
         padding: 0;
         margin: 0;
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 0.1fr 0.3fr 1.2fr 0.2fr;
+        grid-template-rows: 0.1fr 0.3fr 1.9fr 0.2fr;
         grid-template-areas:
             "nav"
             "miheader"
@@ -40,7 +40,7 @@
                 height: auto;
                 display: grid;
                 grid-template-columns: 100%;
-                grid-template-rows: 100% ;
+                grid-template-rows: auto ;
                 grid-template-areas:
                     "seccion1-nosotros"
                     ;
@@ -54,14 +54,14 @@
             
                 section {
                     width: 100%;
-                    height: auto;
+                    height: 100%;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                 }
             
                 article {
-                    height: auto;
+                    height: 100%;
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -95,12 +95,13 @@
 
             .art1-sec1-nosotros{
                 grid-template-columns: 45% 45%;
-                grid-template-rows: 100%;
+                grid-template-rows: auto;
                 grid-template-areas: "text-art1-sec1 img-art1-sec1";
 
                 .img-art1-sec1{
                     display: grid;
                     grid-area: img-art1-sec1;
+                    height: 100%;
 
                     img{
                         width: 100%;
