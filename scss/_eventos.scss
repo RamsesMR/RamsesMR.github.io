@@ -1,0 +1,271 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+
+.eventos {
+
+    background-color: rgb(5, 5, 5);
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 0.1fr 0.3fr 2.3fr 0.2fr;
+    grid-template-areas:
+        "nav"
+        "miheader"
+        "mimain"
+        "mifooter";
+
+    .nav {
+        display: grid;
+        grid-area: nav;
+    }
+
+    .miheader {
+        display: grid;
+        grid-area: miheader;
+        
+
+
+    }
+
+    header {
+        .text-evento {
+            color: #f29400;
+            font-size: 15rem;
+            font-family: "forte";
+            margin-left: 25px;
+            font-weight: 500;
+            transform: rotate(0deg);
+
+
+
+        }
+
+        .cont-header {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            position: absolute;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            line-height: 4rem;
+            margin-top: -100px;
+        }
+
+        .overlay {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 1);
+            z-index: 0;
+
+        }
+    }
+
+    .mimain {
+      height: 100vh;
+        display: grid;
+        grid-area: mimain;
+    }
+
+    .mifooter {
+        display: grid;
+        grid-area: mifooter;
+    }
+
+
+    //seccion1
+    .seccion1-eventos {
+        // background-color: black;
+        gap: 10px;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 45% 45%;
+        grid-template-rows: 20% 80%;
+        grid-template-areas:
+            "title-seccion1-eventos title-seccion1-eventos"
+            "art1-sec1-eventos art2-sec1-eventos";
+
+        .title-seccion1-eventos {
+            display: grid;
+            grid-area: title-seccion1-eventos;
+            text-align: center;
+        }
+
+        .art1-sec1-eventos {
+            height: auto;
+            display: grid;
+            grid-area: art1-sec1-eventos;
+
+            
+        }
+        .art2-sec1-eventos {
+            
+            height: auto;
+            display: grid;
+            grid-area: art2-sec1-eventos;
+        }
+
+        //articulo1
+        .art1-sec1-eventos {
+            height: auto;
+            border-radius: 12px;
+            border: solid 1px #f29400;
+            grid-template-columns: 95%;
+            grid-template-rows: 0.2fr 1fr 0.3fr 0.2fr;
+            grid-template-areas:
+                "title-art1-sec1"
+                "carrusel-art1-sec1"
+                "texto-art1-sec1"
+                "boton-art1-sec1";
+
+            .title-art1-sec1 {
+                display: grid;
+                grid-area: title-art1-sec1;
+                text-align: center;
+            }
+
+            .carrusel-art1-sec1 {
+                position: relative;
+                display: grid;
+                grid-area: carrusel-art1-sec1;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .texto-art1-sec1 {
+                display: grid;
+                grid-area: texto-art1-sec1;
+               
+                li{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    p{
+                        padding-left: 5px;
+                    }
+                    h4{
+                        line-height: 2.5rem;
+                    }
+                }
+            }
+
+            .boton-art1-sec1 {
+             
+                display: grid;
+                grid-area: boton-art1-sec1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                button{
+                    
+                    // border: 0.5px whitesmoke solid;
+                    background-color: #f29400;
+                    color: black;
+                    width: 80%;
+                    box-shadow: 0 8px #c26b00;
+                    font-size: 1.5rem;
+                    font-style: bold;
+                    transition: all 0.2s ease;
+                }
+
+                
+                button:active{
+                    box-shadow: 0 2px #c26b00;
+                    transform: translateY(3px);
+                    
+                }
+
+                
+            }
+
+        }
+
+        //articulo2
+        .art2-sec1-eventos {
+            height: auto;
+            border-radius: 12px;
+            border: solid 1px #f29400;
+            grid-template-columns: 95%;
+            grid-template-rows: 0.2fr 1fr 0.3fr 0.2fr;
+            grid-template-areas:
+                "title-art2-sec1"
+                "carrusel-art2-sec1"
+                "texto-art2-sec1"
+                "boton-art2-sec1";
+
+            .title-art2-sec1 {
+                display: grid;
+                grid-area: title-art2-sec1;
+                text-align: center;
+            }
+
+            .carrusel-art2-sec1 {
+                position: relative;
+                display: grid;
+                grid-area: carrusel-art2-sec1;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .texto-art2-sec1 {
+
+                display: grid;
+                grid-area: texto-art2-sec1;
+                margin-top: 20px;
+                li{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    p{
+                        padding-left: 5px;
+                    }
+                    h4{
+                        line-height: 3.45rem;
+                    }
+                }
+            }
+
+            .boton-art2-sec1 {
+                display: grid;
+                grid-area: boton-art2-sec1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                button{
+                    
+                    // border: 0.5px whitesmoke solid;
+                    background-color: #f29400;
+                    color: black;
+                    width: 80%;
+                    box-shadow: 0 8px #c26b00;
+                    font-size: 1.5rem;
+                    font-style: bold;
+                    transition: all 0.2s ease;
+                }
+                button:active{
+                    box-shadow: 0 2px #c26b00;
+                    transform: translateY(3px);
+                }
+            }
+
+        }
+    }
+}

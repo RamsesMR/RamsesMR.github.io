@@ -1,0 +1,1929 @@
+@import url("https://fonts.cdnfonts.com/css/zrnic");
+@import url("https://fonts.cdnfonts.com/css/publica-play");
+@import url("https://fonts.cdnfonts.com/css/segoe-script");
+.mifooter {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-area: mifooter;
+  height: auto;
+  background-color: rgb(0, 0, 0);
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.5fr;
+  grid-template-rows: 100%;
+  grid-template-areas: "f-1 f-2 f-3";
+  text-align: center;
+  align-self: flex-end;
+}
+
+.f-1 {
+  display: grid;
+  grid-area: f-1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.f-1 img {
+  width: 80%;
+  height: 50%;
+}
+
+.f-2 {
+  display: grid;
+  grid-area: f-2;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+.f-2 a {
+  border-left: 1px rgb(255, 255, 255) solid;
+  color: rgb(0, 38, 255);
+  padding: 7PX;
+}
+
+.f-3 {
+  display: grid;
+  grid-area: f-3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.f-3 .contenedor-redes-sociales {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+}
+.f-3 .contenedor-redes-sociales svg {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.miheader {
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.video {
+  width: 100%;
+  height: 850px;
+  margin: 0;
+  padding: 0;
+  z-index: -1;
+  object-fit: cover;
+  position: relative;
+  background-size: cover;
+}
+
+.cont-header {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  position: absolute;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  line-height: 8rem;
+  margin-top: 120px;
+}
+.cont-header img {
+  width: 30%;
+  height: 30%;
+}
+.cont-header img:hover {
+  scale: 1.05;
+  transition: all 0.5s;
+}
+.cont-header span {
+  display: block;
+}
+.cont-header .text-cyclo {
+  font-size: 9rem;
+  color: #0e72b5;
+  font-family: "Zrnic", sans-serif;
+}
+.cont-header .text-cyclo:hover {
+  scale: 1.05;
+  transition: all 0.5s;
+}
+.cont-header .text-gestion {
+  color: #f29400;
+  font-size: 7.5rem;
+  font-family: "Publica Play", sans-serif;
+  font-weight: 100;
+  margin-left: 80px;
+}
+.cont-header .text-gestion .text-gestion:hover {
+  scale: 1.05;
+  transition: all 0.5s;
+}
+.cont-header .text-evento {
+  color: white;
+  font-size: 10rem;
+  font-family: "segoe script";
+  margin-left: 25px;
+  font-weight: 100;
+  transform: rotate(-15deg);
+  text-shadow: 0 0 5px whitesmoke, 0 0 10px whitesmoke, 0 0 20px whitesmoke, 0 0 40px whitesmoke, 0 0 80px whitesmoke;
+  animation: neon-flicker 1.5s infinite alternate;
+}
+@keyframes neon-flicker {
+  0%, 100% {
+    text-shadow: 0 0 5px whitesmoke, 0 0 10px whitesmoke, 0 0 20px whitesmoke, 0 0 40px whitesmoke, 0 0 80px whitesmoke;
+  }
+  50% {
+    text-shadow: 0 0 2px whitesmoke, 0 0 5px whitesmoke, 0 0 10px whitesmoke, 0 0 20px whitesmoke, 0 0 40px whitesmoke;
+  }
+}
+
+.text-evento:hover {
+  scale: 1.05;
+  transition: all 0.5s;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Color semitransparente */
+  z-index: 0; /* Sobre el video */
+}
+
+/* navbar */
+.nav {
+  z-index: 2;
+  display: grid;
+  grid-area: nav;
+  margin: 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+  grid-template-areas: "logo-nav nav-nav";
+}
+.nav svg {
+  width: 25px;
+  height: 25px;
+}
+
+.logo-nav {
+  display: grid;
+  grid-area: logo-nav;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+}
+.logo-nav img {
+  cursor: pointer;
+  width: 20%;
+  height: 80%;
+}
+
+.tilte-nav:hover {
+  cursor: pointer;
+}
+
+.nav-nav {
+  display: grid;
+  grid-area: nav-nav;
+}
+
+.ul {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.li {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  border-left: 1px #0E72B5 solid;
+  position: relative;
+}
+.li ul {
+  display: none;
+  position: absolute;
+  min-width: 140px;
+}
+
+.a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke;
+  font-size: 1.3rem;
+}
+
+.a:hover {
+  transition: all 1s;
+  font-size: 1.9rem;
+  color: white;
+  text-decoration: underline;
+}
+
+.nosotros {
+  background-color: rgb(5, 5, 5);
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 0.1fr 0.3fr 1.2fr 0.2fr;
+  grid-template-areas: "nav" "miheader" "mimain" "mifooter";
+}
+.nosotros .nav {
+  display: grid;
+  grid-area: nav;
+}
+.nosotros .miheader {
+  display: grid;
+  grid-area: miheader;
+}
+.nosotros .mimain {
+  display: grid;
+  grid-area: mimain;
+}
+.nosotros .mifooter {
+  display: grid;
+  grid-area: mifooter;
+}
+.nosotros .mimain {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+  grid-template-areas: "seccion1-nosotros";
+}
+.nosotros .mimain .seccion1-nosotros {
+  display: grid;
+  grid-area: seccion1-nosotros;
+}
+.nosotros .mimain section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nosotros .mimain article {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nosotros .seccion1-nosotros {
+  grid-template-columns: 100%;
+  grid-template-rows: 20% 80%;
+  grid-template-areas: "title-sec1-nosotros" "art1-sec1-nosotros";
+}
+.nosotros .seccion1-nosotros .title-sec1-nosotros {
+  display: grid;
+  grid-area: title-sec1-nosotros;
+  text-align: center;
+}
+.nosotros .seccion1-nosotros .art1-sec1-nosotros {
+  display: grid;
+  grid-area: art1-sec1-nosotros;
+}
+.nosotros .art1-sec1-nosotros {
+  grid-template-columns: 45% 45%;
+  grid-template-rows: 100%;
+  grid-template-areas: "text-art1-sec1 img-art1-sec1";
+}
+.nosotros .art1-sec1-nosotros .img-art1-sec1 {
+  display: grid;
+  grid-area: img-art1-sec1;
+}
+.nosotros .art1-sec1-nosotros .img-art1-sec1 img {
+  width: 100%;
+  height: 100%;
+}
+.nosotros .art1-sec1-nosotros .text-art1-sec1 {
+  display: grid;
+  grid-area: text-art1-sec1;
+}
+
+.body-contacto {
+  background-color: rgb(5, 5, 5);
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 0.1fr 0.2fr auto 0.2fr;
+  grid-template-areas: "nav" "miheader" "main-contacto" "mifooter";
+}
+.body-contacto p {
+  font-size: 1.2rem;
+  font-family: "Verdana";
+  line-height: 1.6rem;
+  color: whitesmoke;
+}
+.body-contacto h1 {
+  font-size: 2.5rem;
+  font-family: "Courier New";
+  font-weight: 900;
+  line-height: 4rem;
+}
+.body-contacto h2 {
+  font-size: 2.5rem;
+  font-family: "Courier New";
+  font-weight: 700;
+  color: #f29400;
+  text-align: center;
+}
+.body-contacto h3 {
+  font-size: 2rem;
+  font-family: "Courier New";
+  font-weight: 600;
+  color: whitesmoke;
+}
+.body-contacto h4 {
+  font-size: 1.5rem;
+  font-family: "Courier New";
+  font-weight: 500;
+  color: #f29400;
+}
+.body-contacto .nav {
+  display: grid;
+  grid-area: nav;
+}
+.body-contacto .miheader {
+  display: grid;
+  grid-area: miheader;
+}
+.body-contacto .main-contacto {
+  display: grid;
+  grid-area: main-contacto;
+}
+.body-contacto .mifooter {
+  display: grid;
+  grid-area: mifooter;
+}
+.body-contacto .main-contacto {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+  grid-template-areas: "seccion1-contacto";
+}
+.body-contacto .main-contacto .seccion1-contacto {
+  display: grid;
+  grid-area: seccion1-contacto;
+  height: auto;
+}
+.body-contacto .main-contacto section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.body-contacto .main-contacto article {
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+.body-contacto .seccion1-contacto {
+  grid-template-columns: 100%;
+  grid-template-rows: 20% 80%;
+  grid-template-areas: "title-sec1-contacto" "art1-sec1-contacto";
+}
+.body-contacto .seccion1-contacto .title-sec1-contacto {
+  display: grid;
+  grid-area: title-sec1-contacto;
+}
+.body-contacto .seccion1-contacto .art1-sec1-contacto {
+  display: grid;
+  grid-area: art1-sec1-contacto;
+}
+.body-contacto .art1-sec1-contacto {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 30% 60%;
+  grid-template-areas: "texto  texto" "mapa  formulario";
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+}
+.body-contacto .art1-sec1-contacto .texto {
+  display: grid;
+  grid-area: texto;
+  display: flex;
+  justify-content: center;
+  text-align: justify;
+  padding-bottom: 40px;
+}
+.body-contacto .art1-sec1-contacto .texto p {
+  width: 70%;
+}
+.body-contacto .art1-sec1-contacto .mapa {
+  display: grid;
+  grid-area: mapa;
+  border-radius: 10px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 1px 4px 8px 3px rgb(0, 0, 0);
+}
+.body-contacto .art1-sec1-contacto .datos {
+  display: grid;
+  grid-area: datos;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.body-contacto .art1-sec1-contacto .datos ul {
+  list-style: none;
+}
+.body-contacto .art1-sec1-contacto .formulario {
+  display: grid;
+  grid-area: formulario;
+}
+.body-contacto .formulario {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  background-color: black;
+  box-shadow: 1px 1px 1px 2px #f29400;
+}
+.body-contacto .formulario textarea {
+  margin: auto;
+  width: 100%;
+}
+.body-contacto .formulario label {
+  color: whitesmoke;
+}
+.body-contacto .formulario input {
+  margin-top: 10px;
+}
+.body-contacto .formulario .div-boton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.body-contacto .formulario .div-boton button {
+  width: 50%;
+  background-color: #f29400;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+.eventos {
+  background-color: rgb(5, 5, 5);
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 0.1fr 0.3fr 2.3fr 0.2fr;
+  grid-template-areas: "nav" "miheader" "mimain" "mifooter";
+}
+.eventos .nav {
+  display: grid;
+  grid-area: nav;
+}
+.eventos .miheader {
+  display: grid;
+  grid-area: miheader;
+}
+.eventos header .text-evento {
+  color: #f29400;
+  font-size: 15rem;
+  font-family: "forte";
+  margin-left: 25px;
+  font-weight: 500;
+  transform: rotate(0deg);
+}
+.eventos header .cont-header {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  position: absolute;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  line-height: 4rem;
+  margin-top: -100px;
+}
+.eventos header .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  z-index: 0;
+}
+.eventos .mimain {
+  height: 100vh;
+  display: grid;
+  grid-area: mimain;
+}
+.eventos .mifooter {
+  display: grid;
+  grid-area: mifooter;
+}
+.eventos .seccion1-eventos {
+  gap: 10px;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 45% 45%;
+  grid-template-rows: 20% 80%;
+  grid-template-areas: "title-seccion1-eventos title-seccion1-eventos" "art1-sec1-eventos art2-sec1-eventos";
+}
+.eventos .seccion1-eventos .title-seccion1-eventos {
+  display: grid;
+  grid-area: title-seccion1-eventos;
+  text-align: center;
+}
+.eventos .seccion1-eventos .art1-sec1-eventos {
+  height: auto;
+  display: grid;
+  grid-area: art1-sec1-eventos;
+}
+.eventos .seccion1-eventos .art2-sec1-eventos {
+  height: auto;
+  display: grid;
+  grid-area: art2-sec1-eventos;
+}
+.eventos .seccion1-eventos .art1-sec1-eventos {
+  height: auto;
+  border-radius: 12px;
+  border: solid 1px #f29400;
+  grid-template-columns: 95%;
+  grid-template-rows: 0.2fr 1fr 0.3fr 0.2fr;
+  grid-template-areas: "title-art1-sec1" "carrusel-art1-sec1" "texto-art1-sec1" "boton-art1-sec1";
+}
+.eventos .seccion1-eventos .art1-sec1-eventos .title-art1-sec1 {
+  display: grid;
+  grid-area: title-art1-sec1;
+  text-align: center;
+}
+.eventos .seccion1-eventos .art1-sec1-eventos .carrusel-art1-sec1 {
+  position: relative;
+  display: grid;
+  grid-area: carrusel-art1-sec1;
+}
+.eventos .seccion1-eventos .art1-sec1-eventos .carrusel-art1-sec1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.eventos .seccion1-eventos .art1-sec1-eventos .texto-art1-sec1 {
+  display: grid;
+  grid-area: texto-art1-sec1;
+}
+.eventos .seccion1-eventos .art1-sec1-eventos .texto-art1-sec1 li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.eventos .seccion1-eventos .art1-sec1-eventos .texto-art1-sec1 li p {
+  padding-left: 5px;
+}
+.eventos .seccion1-eventos .art1-sec1-eventos .texto-art1-sec1 li h4 {
+  line-height: 2.5rem;
+}
+.eventos .seccion1-eventos .art1-sec1-eventos .boton-art1-sec1 {
+  display: grid;
+  grid-area: boton-art1-sec1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.eventos .seccion1-eventos .art1-sec1-eventos .boton-art1-sec1 button {
+  background-color: #f29400;
+  color: black;
+  width: 80%;
+  box-shadow: 0 8px #c26b00;
+  font-size: 1.5rem;
+  font-style: bold;
+  transition: all 0.2s ease;
+}
+.eventos .seccion1-eventos .art1-sec1-eventos .boton-art1-sec1 button:active {
+  box-shadow: 0 2px #c26b00;
+  transform: translateY(3px);
+}
+.eventos .seccion1-eventos .art2-sec1-eventos {
+  height: auto;
+  border-radius: 12px;
+  border: solid 1px #f29400;
+  grid-template-columns: 95%;
+  grid-template-rows: 0.2fr 1fr 0.3fr 0.2fr;
+  grid-template-areas: "title-art2-sec1" "carrusel-art2-sec1" "texto-art2-sec1" "boton-art2-sec1";
+}
+.eventos .seccion1-eventos .art2-sec1-eventos .title-art2-sec1 {
+  display: grid;
+  grid-area: title-art2-sec1;
+  text-align: center;
+}
+.eventos .seccion1-eventos .art2-sec1-eventos .carrusel-art2-sec1 {
+  position: relative;
+  display: grid;
+  grid-area: carrusel-art2-sec1;
+}
+.eventos .seccion1-eventos .art2-sec1-eventos .carrusel-art2-sec1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.eventos .seccion1-eventos .art2-sec1-eventos .texto-art2-sec1 {
+  display: grid;
+  grid-area: texto-art2-sec1;
+  margin-top: 20px;
+}
+.eventos .seccion1-eventos .art2-sec1-eventos .texto-art2-sec1 li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.eventos .seccion1-eventos .art2-sec1-eventos .texto-art2-sec1 li p {
+  padding-left: 5px;
+}
+.eventos .seccion1-eventos .art2-sec1-eventos .texto-art2-sec1 li h4 {
+  line-height: 3.45rem;
+}
+.eventos .seccion1-eventos .art2-sec1-eventos .boton-art2-sec1 {
+  display: grid;
+  grid-area: boton-art2-sec1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.eventos .seccion1-eventos .art2-sec1-eventos .boton-art2-sec1 button {
+  background-color: #f29400;
+  color: black;
+  width: 80%;
+  box-shadow: 0 8px #c26b00;
+  font-size: 1.5rem;
+  font-style: bold;
+  transition: all 0.2s ease;
+}
+.eventos .seccion1-eventos .art2-sec1-eventos .boton-art2-sec1 button:active {
+  box-shadow: 0 2px #c26b00;
+  transform: translateY(3px);
+}
+
+@media (max-width: 767px) {
+  html {
+    width: 100%;
+    height: 100%;
+  }
+  .body-incio {
+    background-color: rgb(5, 5, 5);
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 0.5fr 0.5fr auto 0.5fr;
+    grid-template-areas: "nav-movile" "miheader" "mimain" "mifooter";
+  }
+  .body-incio .nav {
+    display: none;
+  }
+  .body-incio .nav-movile {
+    display: grid;
+    background-color: black;
+    z-index: 5;
+  }
+  .body-incio .nav-movile ul {
+    list-style: none;
+  }
+  .body-incio .nav-movile a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 1.3rem;
+  }
+  .body-incio .nav-movile nav {
+    background-color: black !important;
+  }
+  .body-incio .nav-movile div {
+    background-color: black;
+  }
+  .body-incio .nav-movile img {
+    width: 100px;
+    height: 50px;
+  }
+  .body-incio .p-4 {
+    background-color: black !important;
+  }
+  .body-incio .bg-dark {
+    background-color: black;
+  }
+  .body-incio .mimain {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1.2fr 1fr 1fr 1.2fr;
+    grid-template-areas: "seccion1-index" "seccion2-index" "seccion3-index" "seccion4-index";
+  }
+  .body-incio .mimain .seccion1-index {
+    display: grid;
+    grid-area: seccion1-index;
+    justify-content: center;
+    align-items: center;
+  }
+  .body-incio .mimain .seccion2-index {
+    display: grid;
+    grid-area: seccion2-index;
+  }
+  .body-incio .mimain .seccion3-index {
+    display: grid;
+    grid-area: seccion3-index;
+  }
+  .body-incio .mimain .seccion4-index {
+    display: grid;
+    grid-area: seccion4-index;
+  }
+  .body-incio .mimain .seccion4-index h2 {
+    font-size: 2rem;
+  }
+  .body-incio .mimain section {
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-top: 5px;
+    justify-content: center;
+    align-items: center;
+  }
+  .body-incio .mimain article {
+    height: auto;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .body-incio .seccion1-index {
+    height: auto;
+    grid-template-columns: 95%;
+    grid-template-rows: 0.2fr 1fr 1fr;
+    grid-template-areas: "title-seccion1" "art1-sec1" "art2-sec1";
+    gap: 10px;
+  }
+  .body-incio .seccion1-index article {
+    width: 100%;
+    height: auto;
+  }
+  .body-incio .seccion1-index .title-seccion1 {
+    display: grid;
+    grid-area: title-seccion1;
+    text-align: center;
+  }
+  .body-incio .seccion1-index .art1-sec1 {
+    display: grid;
+    grid-area: art1-sec1;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 80%;
+    grid-template-areas: "title-art1" "img-art1";
+  }
+  .body-incio .seccion1-index .art1-sec1 .title-art1 {
+    display: grid;
+    grid-template-areas: title-art1;
+    text-align: center;
+  }
+  .body-incio .seccion1-index .art1-sec1 .img-art1 {
+    display: grid;
+    grid-area: img-art1;
+  }
+  .body-incio .seccion1-index .art1-sec1 .img-art1 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    box-shadow: whitesmoke 1px 3px 3px 1px;
+    cursor: pointer;
+  }
+  .body-incio .seccion1-index .art1-sec1 .img-art1 img:hover {
+    transition: all 1s;
+    animation-name: slidein;
+    transform: scale(1.05);
+    opacity: 0.5;
+  }
+  .body-incio .seccion1-index .art2-sec1 {
+    display: grid;
+    grid-area: art2-sec1;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 80%;
+    grid-template-areas: "title-art2" "img-art2";
+  }
+  .body-incio .seccion1-index .art2-sec1 .title-art2 {
+    display: grid;
+    grid-template-areas: title-art2;
+    text-align: center;
+  }
+  .body-incio .seccion1-index .art2-sec1 .img-art2 {
+    display: grid;
+    grid-area: img-art2;
+  }
+  .body-incio .seccion1-index .art2-sec1 .img-art2 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    box-shadow: whitesmoke 1px 3px 3px 1px;
+    cursor: pointer;
+  }
+  .body-incio .seccion1-index .art2-sec1 .img-art2 img:hover {
+    transition: all 1s;
+    animation-name: slidein;
+    transform: scale(1.05);
+    opacity: 0.5;
+  }
+  .body-incio .seccion2-index {
+    height: auto;
+    display: grid;
+    grid-template-columns: 90%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "art1-sec2";
+    display: flex;
+  }
+  .body-incio .seccion2-index .title-sec2 {
+    display: grid;
+    grid-template-areas: title-sec2;
+    text-align: center;
+    text-decoration: underline;
+  }
+  .body-incio .seccion2-index .art1-sec2 {
+    display: grid;
+    grid-area: art1-sec2;
+    gap: 10px;
+    grid-template-columns: 100%;
+    grid-template-rows: 30% 70%;
+    grid-template-areas: "text-art1" "img-art1";
+    justify-content: center;
+    align-items: center;
+  }
+  .body-incio .seccion2-index .text-art1 {
+    display: grid;
+    grid-area: text-art1;
+  }
+  .body-incio .seccion2-index .img-art1 {
+    display: grid;
+    grid-area: img-art1;
+  }
+  .body-incio .seccion2-index .img-art1 img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: gray 1px 3px 4px 1px;
+  }
+  .body-incio .seccion3-index {
+    grid-template-rows: 10% 90%;
+    grid-template-columns: 100%;
+    grid-template-areas: "title-sec3" "art1-sec3";
+  }
+  .body-incio .seccion3-index .title-sec3 {
+    display: grid;
+    grid-area: title-sec3;
+    text-align: center;
+  }
+  .body-incio .seccion3-index .art1-sec3 {
+    display: grid;
+    grid-area: art1-sec3;
+    display: flex;
+    width: 100%;
+  }
+  .body-incio .seccion3-index .contenedor-contenedor-iconos {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .body-incio .seccion4-index {
+    display: grid;
+    grid-template-columns: 90%;
+    grid-template-rows: 10% 90%;
+    grid-template-areas: "title-sec4" "article1-sec4";
+  }
+  .body-incio .seccion4-index .title-sec4 {
+    display: grid;
+    grid-area: title-sec4;
+    text-align: center;
+  }
+  .body-incio .seccion4-index .article1-sec4 {
+    display: grid;
+    grid-area: article1-sec4;
+  }
+  .body-incio .seccion4-index .article1-sec4 {
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "mapa" "formulario";
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+  }
+  .body-incio .seccion4-index .article1-sec4 .mapa {
+    display: grid;
+    grid-area: mapa;
+    border-radius: 10px;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 1px 4px 8px 3px rgb(0, 0, 0);
+  }
+  .body-incio .seccion4-index .article1-sec4 .formulario {
+    display: grid;
+    grid-area: formulario;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    border-radius: 12px;
+    background-color: black;
+    box-shadow: 1px 1px 1px 2px #f29400;
+  }
+  .body-incio .seccion4-index .article1-sec4 .formulario form {
+    width: 90%;
+  }
+  .body-incio .seccion4-index .article1-sec4 .formulario textarea {
+    margin: auto;
+    width: 100%;
+  }
+  .body-incio .seccion4-index .article1-sec4 .formulario label {
+    color: whitesmoke;
+  }
+  .body-incio .seccion4-index .article1-sec4 .formulario input {
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .body-incio .seccion4-index .article1-sec4 .formulario .div-boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .body-incio .seccion4-index .article1-sec4 .formulario .div-boton button {
+    width: 50%;
+    background-color: #f29400;
+  }
+  .body-contacto {
+    background-color: rgb(5, 5, 5);
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 0.1fr 0.2fr auto 0.2fr;
+    grid-template-areas: "nav-movile" "miheader" "main-contacto" "mifooter";
+  }
+  .body-contacto .nav {
+    display: none;
+  }
+  .body-contacto .nav-movile {
+    display: grid;
+    grid-area: nav-movile;
+    background-color: black;
+    z-index: 5;
+  }
+  .body-contacto .nav-movile ul {
+    list-style: none;
+  }
+  .body-contacto .nav-movile a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 1.3rem;
+  }
+  .body-contacto .nav-movile nav {
+    background-color: black !important;
+  }
+  .body-contacto .nav-movile div {
+    background-color: black;
+  }
+  .body-contacto .nav-movile img {
+    width: 100px;
+    height: 50px;
+  }
+  .body-contacto .nav-movile .p-4 {
+    background-color: black !important;
+  }
+  .body-contacto .nav-movile .bg-dark {
+    background-color: black;
+  }
+  .body-contacto .seccion1-contacto {
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 90%;
+    grid-template-areas: "title-sec1-contacto" "art1-sec1-contacto";
+  }
+  .body-contacto .seccion1-contacto .title-sec1-contacto {
+    display: grid;
+    grid-area: title-sec1-contacto;
+  }
+  .body-contacto .seccion1-contacto .art1-sec1-contacto {
+    display: grid;
+    grid-area: art1-sec1-contacto;
+  }
+  .body-contacto .art1-sec1-contacto {
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "texto" "mapa" "formulario";
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+  }
+  .body-contacto .art1-sec1-contacto .texto {
+    display: grid;
+    grid-area: texto;
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+    padding-bottom: 40px;
+  }
+  .body-contacto .art1-sec1-contacto .texto p {
+    width: 70%;
+  }
+  .body-contacto .art1-sec1-contacto .mapa {
+    display: grid;
+    grid-area: mapa;
+    border-radius: 10px;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 1px 4px 8px 3px rgb(0, 0, 0);
+  }
+  .body-contacto .art1-sec1-contacto .datos {
+    display: grid;
+    grid-area: datos;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  .body-contacto .art1-sec1-contacto .datos ul {
+    list-style: none;
+  }
+  .body-contacto .art1-sec1-contacto .formulario {
+    display: grid;
+    grid-area: formulario;
+  }
+  .eventos {
+    background-color: rgb(5, 5, 5);
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 0.1fr 0.3fr 5.5fr 0.2fr;
+    grid-template-areas: "nav-movile" "miheader" "mimain" "mifooter";
+  }
+  .eventos .nav {
+    display: none;
+  }
+  .eventos .nav-movile {
+    display: grid;
+    grid-area: nav-movile;
+    background-color: black;
+    z-index: 5;
+  }
+  .eventos .nav-movile ul {
+    list-style: none;
+  }
+  .eventos .nav-movile a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 1.3rem;
+  }
+  .eventos .nav-movile nav {
+    background-color: black !important;
+  }
+  .eventos .nav-movile div {
+    background-color: black;
+  }
+  .eventos .nav-movile img {
+    width: 100px;
+    height: 50px;
+  }
+  .eventos .nav-movile .p-4 {
+    background-color: black !important;
+  }
+  .eventos .nav-movile .bg-dark {
+    background-color: black;
+  }
+  .eventos .miheader {
+    display: grid;
+    grid-area: miheader;
+  }
+  .eventos header .text-evento {
+    color: #f29400;
+    font-size: 6rem;
+    font-family: "forte";
+    margin-left: 25px;
+    font-weight: 500;
+    transform: rotate(0deg);
+  }
+  .eventos header .cont-header {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    line-height: 4rem;
+    margin-top: -100px;
+  }
+  .eventos header .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    z-index: 0;
+  }
+  .eventos .mimain {
+    display: grid;
+    grid-area: mimain;
+  }
+  .eventos .mifooter {
+    display: grid;
+    grid-area: mifooter;
+  }
+  .eventos .seccion1-eventos {
+    background-color: black;
+    gap: 10px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 5% 50% 50%;
+    grid-template-areas: "title-seccion1-eventos" "art1-sec1-eventos" "art2-sec1-eventos";
+  }
+  .eventos .seccion1-eventos .title-seccion1-eventos {
+    display: grid;
+    grid-area: title-seccion1-eventos;
+    text-align: center;
+  }
+  .eventos .seccion1-eventos .art1-sec1-eventos {
+    height: auto;
+    display: grid;
+    grid-area: art1-sec1-eventos;
+  }
+  .eventos .seccion1-eventos .art2-sec1-eventos {
+    height: auto;
+    display: grid;
+    grid-area: art2-sec1-eventos;
+  }
+  .eventos .seccion1-eventos .art1-sec1-eventos {
+    height: auto;
+    border-radius: 12px;
+    border: solid 1px #f29400;
+    grid-template-columns: 95%;
+    grid-template-rows: 0.2fr 0.4fr 0.3fr 0.2fr;
+    grid-template-areas: "title-art1-sec1" "carrusel-art1-sec1" "texto-art1-sec1" "boton-art1-sec1";
+  }
+  .eventos .seccion1-eventos .art1-sec1-eventos .title-art1-sec1 {
+    display: grid;
+    grid-area: title-art1-sec1;
+    text-align: center;
+  }
+  .eventos .seccion1-eventos .art1-sec1-eventos .carrusel-art1-sec1 {
+    position: relative;
+    display: grid;
+    grid-area: carrusel-art1-sec1;
+  }
+  .eventos .seccion1-eventos .art1-sec1-eventos .carrusel-art1-sec1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .eventos .seccion1-eventos .art1-sec1-eventos .texto-art1-sec1 {
+    display: grid;
+    grid-area: texto-art1-sec1;
+  }
+  .eventos .seccion1-eventos .art1-sec1-eventos .texto-art1-sec1 li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .eventos .seccion1-eventos .art1-sec1-eventos .texto-art1-sec1 li p {
+    padding-left: 5px;
+  }
+  .eventos .seccion1-eventos .art1-sec1-eventos .texto-art1-sec1 li h4 {
+    line-height: 2.5rem;
+  }
+  .eventos .seccion1-eventos .art1-sec1-eventos .boton-art1-sec1 {
+    display: grid;
+    grid-area: boton-art1-sec1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .eventos .seccion1-eventos .art1-sec1-eventos .boton-art1-sec1 button {
+    background-color: #f29400;
+    color: black;
+    width: 80%;
+    box-shadow: 0 8px #c26b00;
+    font-size: 1.5rem;
+    font-style: bold;
+    transition: all 0.2s ease;
+  }
+  .eventos .seccion1-eventos .art1-sec1-eventos .boton-art1-sec1 button:active {
+    box-shadow: 0 2px #c26b00;
+    transform: translateY(3px);
+  }
+  .eventos .seccion1-eventos .art2-sec1-eventos {
+    height: auto;
+    border-radius: 12px;
+    border: solid 1px #f29400;
+    grid-template-columns: 95%;
+    grid-template-rows: 0.2fr 0.5fr 0.3fr 0.2fr;
+    grid-template-areas: "title-art2-sec1" "carrusel-art2-sec1" "texto-art2-sec1" "boton-art2-sec1";
+  }
+  .eventos .seccion1-eventos .art2-sec1-eventos .title-art2-sec1 {
+    display: grid;
+    grid-area: title-art2-sec1;
+    text-align: center;
+  }
+  .eventos .seccion1-eventos .art2-sec1-eventos .carrusel-art2-sec1 {
+    position: relative;
+    display: grid;
+    grid-area: carrusel-art2-sec1;
+  }
+  .eventos .seccion1-eventos .art2-sec1-eventos .carrusel-art2-sec1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .eventos .seccion1-eventos .art2-sec1-eventos .texto-art2-sec1 {
+    display: grid;
+    grid-area: texto-art2-sec1;
+    margin-top: 20px;
+  }
+  .eventos .seccion1-eventos .art2-sec1-eventos .texto-art2-sec1 li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .eventos .seccion1-eventos .art2-sec1-eventos .texto-art2-sec1 li p {
+    padding-left: 5px;
+  }
+  .eventos .seccion1-eventos .art2-sec1-eventos .texto-art2-sec1 li h4 {
+    line-height: 3.45rem;
+  }
+  .eventos .seccion1-eventos .art2-sec1-eventos .boton-art2-sec1 {
+    display: grid;
+    grid-area: boton-art2-sec1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .eventos .seccion1-eventos .art2-sec1-eventos .boton-art2-sec1 button {
+    background-color: #f29400;
+    color: black;
+    width: 80%;
+    box-shadow: 0 8px #c26b00;
+    font-size: 1.5rem;
+    font-style: bold;
+    transition: all 0.2s ease;
+  }
+  .eventos .seccion1-eventos .art2-sec1-eventos .boton-art2-sec1 button:active {
+    box-shadow: 0 2px #c26b00;
+    transform: translateY(3px);
+  }
+  .mifooter {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-area: mifooter;
+    height: auto;
+    background-color: rgb(0, 0, 0);
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1.5fr 1.5fr 1.5fr;
+    grid-template-areas: "f-1" "f-3" "f-2";
+    text-align: center;
+  }
+  .f-1 {
+    display: grid;
+    grid-area: f-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .f-1 img {
+    width: 30%;
+    height: 30%;
+  }
+  .f-2 {
+    display: grid;
+    grid-area: f-2;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
+  .f-2 a {
+    border-left: 1px rgb(255, 255, 255) solid;
+    color: rgb(0, 38, 255);
+    padding: 7PX;
+  }
+  .f-3 {
+    display: grid;
+    grid-area: f-3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .f-3 .contenedor-redes-sociales {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+  }
+  .f-3 .contenedor-redes-sociales svg {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+  }
+  .text-evento {
+    color: #f29400;
+    font-size: 15rem;
+    font-family: "forte";
+    margin-left: 25px;
+    font-weight: 500;
+    transform: rotate(0deg);
+  }
+  .cont-header {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    line-height: 8rem;
+  }
+  .cont-header img {
+    width: 20%;
+    height: 20%;
+  }
+  .cont-header img:hover {
+    scale: 1.05;
+    transition: all 0.5s;
+  }
+  .cont-header span {
+    display: block;
+  }
+  .cont-header .text-cyclo {
+    font-size: 3rem;
+    color: #0e72b5;
+    font-family: "Zrnic", sans-serif;
+  }
+  .cont-header .text-cyclo:hover {
+    scale: 1.05;
+    transition: all 0.5s;
+  }
+  .cont-header .text-gestion {
+    color: #f29400;
+    font-size: 3rem;
+    font-family: "Publica Play", sans-serif;
+    font-weight: 100;
+    margin-left: 80px;
+  }
+  .cont-header .text-gestion .text-gestion:hover {
+    scale: 1.05;
+    transition: all 0.5s;
+  }
+  .cont-header .text-evento {
+    color: white;
+    font-size: 4rem;
+    font-family: "segoe script";
+    margin-left: 25px;
+    font-weight: 100;
+    transform: rotate(-15deg);
+    text-shadow: 0 0 5px whitesmoke, 0 0 10px whitesmoke, 0 0 20px whitesmoke, 0 0 40px whitesmoke, 0 0 80px whitesmoke;
+    animation: neon-flicker 1.5s infinite alternate;
+  }
+  @keyframes neon-flicker {
+    0%, 100% {
+      text-shadow: 0 0 5px whitesmoke, 0 0 10px whitesmoke, 0 0 20px whitesmoke, 0 0 40px whitesmoke, 0 0 80px whitesmoke;
+    }
+    50% {
+      text-shadow: 0 0 2px whitesmoke, 0 0 5px whitesmoke, 0 0 10px whitesmoke, 0 0 20px whitesmoke, 0 0 40px whitesmoke;
+    }
+  }
+  .text-evento:hover {
+    scale: 1.05;
+    transition: all 0.5s;
+  }
+  .nosotros {
+    background-color: rgb(5, 5, 5);
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 0.1fr 0.3fr 3fr 0.2fr;
+    grid-template-areas: "nav" "miheader" "mimain" "mifooter";
+  }
+  .nosotros .nav {
+    display: grid;
+    grid-area: nav;
+  }
+  .nosotros .miheader {
+    display: grid;
+    grid-area: miheader;
+  }
+  .nosotros .mimain {
+    display: grid;
+    grid-area: mimain;
+    height: auto;
+  }
+  .nosotros .mifooter {
+    display: grid;
+    grid-area: mifooter;
+  }
+  .nosotros .mimain {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "seccion1-nosotros";
+  }
+  .nosotros .mimain .seccion1-nosotros {
+    display: grid;
+    grid-area: seccion1-nosotros;
+  }
+  .nosotros .mimain section {
+    width: 100%;
+    height: auto;
+  }
+  .nosotros .mimain article {
+    height: auto;
+    width: 100%;
+  }
+  .nosotros .nav {
+    display: none;
+  }
+  .nosotros .nav-movile {
+    display: grid;
+    background-color: black;
+    z-index: 5;
+  }
+  .nosotros .nav-movile ul {
+    list-style: none;
+  }
+  .nosotros .nav-movile a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 1.3rem;
+  }
+  .nosotros .nav-movile nav {
+    background-color: black !important;
+  }
+  .nosotros .nav-movile div {
+    background-color: black;
+  }
+  .nosotros .nav-movile img {
+    width: 100px;
+    height: 50px;
+  }
+  .nosotros .p-4 {
+    background-color: black !important;
+  }
+  .nosotros .bg-dark {
+    background-color: black;
+  }
+  .nosotros .seccion1-nosotros {
+    height: auto;
+    grid-template-columns: 90%;
+    grid-template-rows: 20% 80%;
+    grid-template-areas: "title-sec1-nosotros" "art1-sec1-nosotros";
+  }
+  .nosotros .seccion1-nosotros .title-sec1-nosotros {
+    display: grid;
+    grid-area: title-sec1-nosotros;
+    text-align: center;
+  }
+  .nosotros .seccion1-nosotros .art1-sec1-nosotros {
+    display: grid;
+    grid-area: art1-sec1-nosotros;
+  }
+  .nosotros .art1-sec1-nosotros {
+    grid-template-columns: 100%;
+    grid-template-rows: 70% 30%;
+    grid-template-areas: "text-art1-sec1" "img-art1-sec1";
+  }
+  .nosotros .art1-sec1-nosotros .img-art1-sec1 {
+    display: grid;
+    grid-area: img-art1-sec1;
+  }
+  .nosotros .art1-sec1-nosotros .text-art1-sec1 {
+    display: grid;
+    grid-area: text-art1-sec1;
+  }
+}
+.privacidad {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+}
+.privacidad section {
+  width: 100%;
+  height: 100%;
+}
+.privacidad article {
+  width: 100%;
+  height: 100%;
+}
+.privacidad .mimain {
+  display: flex;
+}
+.privacidad p {
+  font-size: 1.2rem;
+  font-family: "Verdana";
+  line-height: 2rem;
+  color: whitesmoke;
+  text-align: justify;
+}
+.privacidad h1 {
+  font-size: 4rem;
+  font-family: "Courier New";
+  font-weight: 900;
+  line-height: 4rem;
+}
+.privacidad h2 {
+  font-size: 3rem;
+  font-family: "Courier New";
+  font-weight: 700;
+  color: #f29400;
+  line-height: 4rem;
+}
+
+html {
+  background-color: #2b2b2b;
+  font-family: "Verdana";
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  color: whitesmoke;
+}
+html .nav-movile {
+  display: none;
+}
+html p {
+  font-size: 1.2rem;
+  font-family: "Verdana";
+  line-height: 1.6rem;
+  color: whitesmoke;
+}
+html h1 {
+  font-size: 2.5rem;
+  font-family: "Courier New";
+  font-weight: 900;
+  line-height: 4rem;
+}
+html h2 {
+  font-size: 60px;
+  font-family: "Courier New";
+  font-weight: 700;
+  color: #f29400;
+  line-height: 4rem;
+}
+html h3 {
+  font-size: 2rem;
+  font-family: "Courier New";
+  font-weight: 600;
+  color: whitesmoke;
+  line-height: 4rem;
+}
+html h4 {
+  font-size: 1.5rem;
+  font-family: "Courier New";
+  font-weight: 500;
+  line-height: 4rem;
+  color: #f29400;
+}
+
+.body-incio {
+  background-color: rgb(5, 5, 5);
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 0.1fr 0.3fr 3.7fr 0.2fr;
+  grid-template-areas: "nav" "miheader" "mimain" "mifooter";
+}
+
+.nav-movile {
+  display: none;
+}
+
+.nav {
+  display: grid;
+  grid-area: nav;
+}
+
+.miheader {
+  display: grid;
+  grid-area: miheader;
+}
+
+.mimain {
+  display: grid;
+  grid-area: mimain;
+}
+
+.mifooter {
+  display: grid;
+  grid-area: mifooter;
+}
+
+.mimain {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 0.4fr 0.4fr 0.2fr 0.4fr;
+  grid-template-areas: "seccion1-index" "seccion2-index" "seccion3-index" "seccion4-index";
+}
+.mimain .seccion1-index {
+  display: grid;
+  grid-area: seccion1-index;
+}
+.mimain .seccion2-index {
+  display: grid;
+  grid-area: seccion2-index;
+}
+.mimain .seccion3-index {
+  display: grid;
+  grid-area: seccion3-index;
+}
+.mimain .seccion4-index {
+  display: grid;
+  grid-area: seccion4-index;
+}
+.mimain section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mimain article {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.seccion1-index {
+  grid-template-columns: 45% 45%;
+  grid-template-rows: 15% 60%;
+  grid-template-areas: "title-seccion1 title-seccion1" "art1-sec1 art2-sec1";
+  gap: 10px;
+}
+.seccion1-index article {
+  width: 90%;
+}
+.seccion1-index .title-seccion1 {
+  display: grid;
+  grid-area: title-seccion1;
+  text-align: center;
+}
+.seccion1-index .art1-sec1 {
+  display: grid;
+  grid-area: art1-sec1;
+  grid-template-columns: 100%;
+  grid-template-rows: 30% 70%;
+  grid-template-areas: "title-art1" "img-art1";
+}
+.seccion1-index .art1-sec1 .title-art1 {
+  display: grid;
+  grid-template-areas: title-art1;
+  text-align: center;
+}
+.seccion1-index .art1-sec1 .img-art1 {
+  display: grid;
+  grid-area: img-art1;
+}
+.seccion1-index .art1-sec1 .img-art1 img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  box-shadow: whitesmoke 1px 3px 3px 1px;
+  cursor: pointer;
+}
+.seccion1-index .art1-sec1 .img-art1 img:hover {
+  transition: all 1s;
+  animation-name: slidein;
+  transform: scale(1.05);
+  opacity: 0.5;
+}
+.seccion1-index .art2-sec1 {
+  display: grid;
+  grid-area: art2-sec1;
+  grid-template-columns: 100%;
+  grid-template-rows: 30% 70%;
+  grid-template-areas: "title-art2" "img-art2";
+}
+.seccion1-index .art2-sec1 .title-art2 {
+  display: grid;
+  grid-template-areas: title-art2;
+  text-align: center;
+}
+.seccion1-index .art2-sec1 .img-art2 {
+  display: grid;
+  grid-area: img-art2;
+}
+.seccion1-index .art2-sec1 .img-art2 img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  box-shadow: whitesmoke 1px 3px 3px 1px;
+  cursor: pointer;
+}
+.seccion1-index .art2-sec1 .img-art2 img:hover {
+  transition: all 1s;
+  animation-name: slidein;
+  transform: scale(1.05);
+  opacity: 0.5;
+}
+
+.seccion2-index {
+  width: 90%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr;
+  grid-template-areas: "art1-sec2";
+  display: flex;
+}
+.seccion2-index .title-sec2 {
+  display: grid;
+  grid-template-areas: title-sec2;
+  text-align: center;
+  text-decoration: underline;
+}
+.seccion2-index .art1-sec2 {
+  display: grid;
+  grid-area: art1-sec2;
+  gap: 10px;
+  grid-template-columns: 30% 50%;
+  grid-template-rows: 50%;
+  grid-template-areas: "text-art1 img-art1";
+  justify-content: center;
+  align-items: center;
+}
+.seccion2-index .text-art1 {
+  display: grid;
+  grid-area: text-art1;
+}
+.seccion2-index .img-art1 {
+  display: grid;
+  grid-area: img-art1;
+}
+.seccion2-index .img-art1 img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: gray 1px 3px 4px 1px;
+}
+
+.seccion3-index {
+  grid-template-rows: 5% 95%;
+  grid-template-columns: 100%;
+  grid-template-areas: "title-sec3" "art1-sec3";
+}
+.seccion3-index .title-sec3 {
+  display: grid;
+  grid-area: title-sec3;
+  text-align: center;
+}
+.seccion3-index .art1-sec3 {
+  display: grid;
+  grid-area: art1-sec3;
+  display: flex;
+  width: 100%;
+}
+.seccion3-index .contenedor-contenedor-iconos {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.seccion4-index {
+  display: grid;
+  grid-template-columns: 90%;
+  grid-template-rows: 20% 80%;
+  grid-template-areas: "title-sec4" "article1-sec4";
+}
+.seccion4-index .title-sec4 {
+  display: grid;
+  grid-area: title-sec4;
+  text-align: center;
+}
+.seccion4-index .article1-sec4 {
+  display: grid;
+  grid-area: article1-sec4;
+}
+.seccion4-index .article1-sec4 {
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 100%;
+  grid-template-areas: "mapa datos formulario";
+}
+.seccion4-index .article1-sec4 .mapa {
+  display: grid;
+  grid-area: mapa;
+  border-radius: 10px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 1px 4px 8px 3px rgb(0, 0, 0);
+}
+.seccion4-index .article1-sec4 .datos {
+  display: grid;
+  grid-area: datos;
+  color: whitesmoke;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.seccion4-index .article1-sec4 .datos ul {
+  list-style: none;
+}
+.seccion4-index .article1-sec4 .formulario {
+  display: grid;
+  grid-area: formulario;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 12px;
+  background-color: black;
+  box-shadow: 1px 1px 1px 2px #f29400;
+}
+.seccion4-index .article1-sec4 .formulario textarea {
+  margin: auto;
+  width: 100%;
+}
+.seccion4-index .article1-sec4 .formulario label {
+  color: whitesmoke;
+}
+.seccion4-index .article1-sec4 .formulario input {
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.seccion4-index .article1-sec4 .formulario .div-boton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.seccion4-index .article1-sec4 .formulario .div-boton button {
+  width: 50%;
+  background-color: #f29400;
+}
+
+/*# sourceMappingURL=main.css.map */

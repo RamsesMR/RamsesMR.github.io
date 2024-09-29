@@ -1,0 +1,230 @@
+.body-contacto {
+
+    p {
+        font-size: 1.2rem;
+        font-family: 'Verdana';
+        line-height: 1.6rem;
+        color: whitesmoke;
+
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        font-family: 'Courier New';
+        font-weight: 900;
+        line-height: 4rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        font-family: 'Courier New';
+        font-weight: 700;
+        color: #f29400;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 2rem;
+        font-family: 'Courier New';
+        font-weight: 600;
+        color: whitesmoke;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+        font-family: 'Courier New';
+        font-weight: 500;
+        color: #f29400;
+    }
+
+    //body contacto
+    background-color: rgb(5, 5, 5);
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 0.1fr 0.2fr auto 0.2fr;
+    grid-template-areas: 
+    "nav"
+    "miheader"
+    "main-contacto"
+    "mifooter";
+
+    .nav {
+        display: grid;
+        grid-area: nav;
+    }
+
+    .miheader {
+        display: grid;
+        grid-area: miheader;
+    }
+
+    .main-contacto {
+        display: grid;
+        grid-area: main-contacto;
+    }
+
+    .mifooter {
+        display: grid;
+        grid-area: mifooter;
+    }
+
+    //main contacto
+    .main-contacto {
+
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 100%;
+        grid-template-areas:
+            "seccion1-contacto";
+
+
+        .seccion1-contacto {
+            display: grid;
+            grid-area: seccion1-contacto;
+            height: auto;
+
+        }
+
+        section {
+            width: 100%;
+            height: auto;
+            display: flex;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        article {
+            height: auto;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+    }
+
+    //seccion1
+    .seccion1-contacto {
+        grid-template-columns: 100%;
+        grid-template-rows: 20% 80%;
+        grid-template-areas:
+            "title-sec1-contacto"
+            "art1-sec1-contacto";
+
+        .title-sec1-contacto {
+            display: grid;
+            grid-area: title-sec1-contacto;
+        }
+
+        .art1-sec1-contacto {
+            display: grid;
+            grid-area: art1-sec1-contacto;
+
+        }
+    }
+
+    //articulo1
+    .art1-sec1-contacto {
+
+        grid-template-columns: 1fr  1fr;
+        grid-template-rows: 30% 60%;
+        grid-template-areas:
+            "texto  texto"
+            "mapa  formulario";
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+
+
+
+        .texto {
+
+            display: grid;
+            grid-area: texto;
+            display: flex;
+            justify-content: center;
+            text-align: justify;
+            padding-bottom: 40px;
+          
+            
+            p{
+                width: 70%;
+                
+                
+            }
+        }
+
+        .mapa {
+            display: grid;
+            grid-area: mapa;
+            // border: 5px solid #0e72b5 ;
+        border-radius: 10px;
+        width: 100%;
+        overflow: hidden;
+        box-shadow: 1px 4px 8px 3px rgba(0, 0, 0, 1);
+        } 
+
+        .datos {
+            display: grid;
+            grid-area: datos;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            ul {
+                list-style: none;
+            }
+        }
+
+        .formulario {
+            display: grid;
+            grid-area: formulario;
+            
+        }
+    }
+
+    .formulario {
+        display: flex;
+        gap: 10px;
+        padding: 10px;
+        // border: 2px solid #f29400 ;
+        border-radius: 12px;
+        background-color: black;
+        box-shadow: 1px 1px 1px 2px #f29400;
+      
+        textarea {
+            margin: auto;
+            width: 100%;
+        }
+        label{
+            color: whitesmoke;
+        }
+        input{
+            margin-top: 10px;
+        }
+
+        .div-boton{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            button{
+                width: 50%;
+                background-color: #f29400;
+            }
+        }
+
+       
+
+        
+    }
+
+}

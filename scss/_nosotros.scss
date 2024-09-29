@@ -1,0 +1,117 @@
+.nosotros{
+    
+        background-color: rgb(5, 5, 5);
+        width: 100%;
+        height: auto;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 0.1fr 0.3fr 1.2fr 0.2fr;
+        grid-template-areas:
+            "nav"
+            "miheader"
+            "mimain"
+            "mifooter";
+            
+            .nav {
+                display: grid;
+                grid-area: nav;
+            }
+            
+            .miheader {
+                display: grid;
+                grid-area: miheader;
+            }
+            
+            .mimain {
+                display: grid;
+                grid-area: mimain;
+            }
+            
+            .mifooter {
+                display: grid;
+                grid-area: mifooter;
+            }
+
+            .mimain {
+
+                width: 100%;
+                height: auto;
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 100% ;
+                grid-template-areas:
+                    "seccion1-nosotros"
+                    ;
+            
+            
+                .seccion1-nosotros {
+                    display: grid;
+                    grid-area: seccion1-nosotros;
+                }
+            
+            
+                section {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            
+                article {
+                    height: auto;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            
+            
+            }
+
+            //seccion 1
+
+            .seccion1-nosotros {
+               grid-template-columns: 100%;
+               grid-template-rows: 20% 80%;
+               grid-template-areas: 
+               "title-sec1-nosotros"
+               "art1-sec1-nosotros";
+
+               .title-sec1-nosotros{
+                display: grid;
+                grid-area: title-sec1-nosotros;
+                text-align: center;
+               }
+
+               .art1-sec1-nosotros{
+                display: grid;
+                grid-area: art1-sec1-nosotros;
+               }
+            }
+
+            //articulo 1
+
+            .art1-sec1-nosotros{
+                grid-template-columns: 45% 45%;
+                grid-template-rows: 100%;
+                grid-template-areas: "text-art1-sec1 img-art1-sec1";
+
+                .img-art1-sec1{
+                    display: grid;
+                    grid-area: img-art1-sec1;
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        
+                    }
+                }
+
+                .text-art1-sec1{
+                    display: grid;
+                    grid-area: text-art1-sec1;
+                }
+            }
+}

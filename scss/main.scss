@@ -1,0 +1,456 @@
+@import "_footer";
+@import "_header";
+@import "_navbar";
+@import "_nosotros";
+@import "_contacto";
+@import "_eventos";
+@import "_responsiveMovil";
+@import "_responsiveTablet";
+@import "_privacidad";
+
+@import url('https://fonts.cdnfonts.com/css/zrnic');
+@import url('https://fonts.cdnfonts.com/css/publica-play');
+ @import url('https://fonts.cdnfonts.com/css/segoe-script');
+
+
+                
+                                                
+
+
+html {
+    background-color: #2b2b2b;
+    font-family: 'Verdana';
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    color: whitesmoke;
+
+    .nav-movile{
+        display: none;
+    }
+
+    p {
+        font-size: 1.2rem;
+        font-family: 'Verdana';
+        line-height: 1.6rem;
+        color: whitesmoke;
+
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        font-family: 'Courier New';
+        font-weight: 900;
+        line-height: 4rem;
+    }
+
+    h2 {
+        font-size: 60px;
+        font-family: 'Courier New';
+        font-weight: 700;
+        color: #f29400;
+        line-height: 4rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+        font-family: 'Courier New';
+        font-weight: 600;
+        color: whitesmoke;
+        line-height: 4rem;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+        font-family: 'Courier New';
+        font-weight: 500;
+        line-height: 4rem;
+        color: #f29400;
+    }
+}
+
+
+//construccion de body
+.body-incio {
+    background-color: rgb(5, 5, 5);
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 0.1fr 0.3fr 3.7fr 0.2fr;
+    grid-template-areas:
+        "nav"
+        "miheader"
+        "mimain"
+        "mifooter";
+}
+
+.nav-movile{
+    display: none;
+}
+.nav {
+    display: grid;
+    grid-area: nav;
+}
+
+.miheader {
+    display: grid;
+    grid-area: miheader;
+}
+
+.mimain {
+    display: grid;
+    grid-area: mimain;
+}
+
+.mifooter {
+    display: grid;
+    grid-area: mifooter;
+}
+
+
+
+//construccion del main
+.mimain {
+
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 0.4fr 0.4fr 0.2fr 0.4fr;
+    grid-template-areas:
+        "seccion1-index"
+        "seccion2-index"
+        "seccion3-index"
+        "seccion4-index";
+
+
+    .seccion1-index {
+        display: grid;
+        grid-area: seccion1-index;
+    }
+
+    .seccion2-index {
+        display: grid;
+        grid-area: seccion2-index;
+    }
+
+    .seccion3-index {
+        display: grid;
+        grid-area: seccion3-index;
+    }
+
+    .seccion4-index {
+        display: grid;
+        grid-area: seccion4-index;
+    }
+
+    section {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    article {
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+}
+
+//seccion 1 del index
+
+.seccion1-index {
+    grid-template-columns: 45% 45%;
+    grid-template-rows: 15% 60%;
+    grid-template-areas:
+        "title-seccion1 title-seccion1"
+        "art1-sec1 art2-sec1";
+
+    gap: 10px;
+
+    article {
+        width: 90%;
+    }
+
+    .title-seccion1 {
+        display: grid;
+        grid-area: title-seccion1;
+        text-align: center;
+    }
+
+    //articulo1
+    .art1-sec1 {
+        display: grid;
+        grid-area: art1-sec1;
+        grid-template-columns: 100%;
+        grid-template-rows: 30% 70%;
+        grid-template-areas:
+            "title-art1"
+            "img-art1";
+
+        .title-art1 {
+            display: grid;
+            grid-template-areas: title-art1;
+            text-align: center;
+        }
+
+        .img-art1 {
+            display: grid;
+            grid-area: img-art1;
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 12px;
+                box-shadow: whitesmoke 1px 3px 3px 1px;
+                cursor: pointer;
+            }
+
+            img:hover {
+
+                transition: all 1s;
+                animation-name: slidein;
+                transform: scale(1.05);
+                opacity: 0.5;
+            }
+
+        }
+    }
+
+    //articulo2
+
+    .art2-sec1 {
+        display: grid;
+        grid-area: art2-sec1;
+        grid-template-columns: 100%;
+        grid-template-rows: 30% 70%;
+        grid-template-areas:
+            "title-art2"
+            "img-art2";
+
+        .title-art2 {
+            display: grid;
+            grid-template-areas: title-art2;
+            text-align: center;
+        }
+
+        .img-art2 {
+            display: grid;
+            grid-area: img-art2;
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 12px;
+                box-shadow: whitesmoke 1px 3px 3px 1px;
+                cursor: pointer;
+            }
+
+            img:hover {
+
+                transition: all 1s;
+                animation-name: slidein;
+                transform: scale(1.05);
+                opacity: 0.5;
+            }
+        }
+    }
+
+
+}
+
+//seccion 2
+
+.seccion2-index {
+
+    width: 90%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "art1-sec2";
+    display: flex;
+
+
+
+    .title-sec2 {
+        display: grid;
+        grid-template-areas: title-sec2;
+        text-align: center;
+        text-decoration: underline;
+    }
+
+    //articulo1 seccion2
+    .art1-sec2 {
+
+
+        display: grid;
+        grid-area: art1-sec2;
+        gap: 10px;
+        grid-template-columns: 30% 50%;
+        grid-template-rows: 50%;
+        grid-template-areas:
+            "text-art1 img-art1";
+
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text-art1 {
+        display: grid;
+        grid-area: text-art1;
+    }
+
+    .img-art1 {
+        display: grid;
+        grid-area: img-art1;
+
+        img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: gray 1px 3px 4px 1px;
+        }
+    }
+
+
+}
+
+//seccion 3
+.seccion3-index {
+
+    grid-template-rows: 5% 95%;
+    grid-template-columns: 100%;
+    grid-template-areas:
+        "title-sec3"
+        "art1-sec3";
+
+
+    .title-sec3 {
+        display: grid;
+        grid-area: title-sec3;
+        text-align: center;
+    }
+
+    .art1-sec3 {
+        display: grid;
+        grid-area: art1-sec3;
+        display: flex;
+        width: 100%;
+    }
+
+    .contenedor-contenedor-iconos {
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+
+
+
+
+    }
+}
+
+//seccion4
+.seccion4-index {
+    display: grid;
+    grid-template-columns: 90%;
+    grid-template-rows: 20% 80%;
+    grid-template-areas:
+        "title-sec4"
+        "article1-sec4";
+
+    .title-sec4 {
+        display: grid;
+        grid-area: title-sec4;
+        text-align: center;
+    }
+
+    .article1-sec4 {
+        display: grid;
+        grid-area: article1-sec4;
+    }
+ 
+
+    .article1-sec4 {  
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 100%;
+        grid-template-areas: "mapa datos formulario";
+        
+
+
+        .mapa {
+            display: grid;
+            grid-area: mapa;
+            border-radius: 10px;
+            width: 100%;
+            overflow: hidden;
+            box-shadow: 1px 4px 8px 3px rgba(0, 0, 0, 1);
+        }
+
+        .datos {
+            display: grid;
+            grid-area: datos;
+
+            color: whitesmoke;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            ul {
+                list-style: none;
+            }
+        }
+
+        .formulario {
+            display: grid;
+            grid-area: formulario;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            padding: 10px;
+            // border: 2px solid #f29400 ;
+            border-radius: 12px;
+            background-color: black;
+            box-shadow: 1px 1px 1px 2px #f29400;
+
+            textarea {
+                margin: auto;
+                width: 100%;
+            }
+
+            label {
+                color: whitesmoke;
+            }
+
+            input {
+                justify-content: center;
+                align-items: center;
+                margin-top: 10px;
+            }
+
+            .div-boton {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                button {
+                    width: 50%;
+                    background-color: #f29400;
+                }
+            }
+        }
+    }
+}

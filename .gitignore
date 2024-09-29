@@ -1,0 +1,7 @@
+*.ia
+*.psd
+node_modules/
+*.vsc
+*.log
+*.psd
+*.ia
