@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@media (max-width: 767px) {
+
+    html{
+        background-color: black;
+        color: gold;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+      
+}
+    body{
+        height: 100%;
+        width: 100%;
+        font-family: "Roboto", serif;   
+    }
+
+    form{
+        width: 100%;
+        height: 100%;
+    }
+    .mi-carta {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        /* Fondo */
+        background-image: url("src/frame-2933185_640.jpg");
+        background-size: cover; /* Asegura que la imagen de fondo cubra todo el contenedor */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        background-position: center; /* Centra la imagen de fondo */
+    
+        /* Dimensiones */
+        width: 100%; /* Usa unidades relativas al viewport para asegurar ancho completo */
+        height: 100%; /* Usa unidades relativas al viewport para asegurar alto completo */
+    
+        /* Solución para posibles conflictos de !important */
+        box-sizing: border-box; /* Asegura que el ancho/alto incluyan el padding y el borde */
+    }
+    
+
+    .centrado{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Estilo para el fieldset */
+.fieldset-container {
+    border: 1px solid GOLD; /* Borde azul */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px;
+    margin: 20px; /* Espacio alrededor */
+  
+}
+
+.legend-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color:BLACK; /* Color del texto del legend */
+    padding: 0 10px;
+   
+    margin-bottom: 10px;
+}
+
+.mi-carta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    padding: 20px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0);
+}
+
+.centrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+}

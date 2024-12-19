@@ -1,0 +1,22 @@
+html {
+  display: grid;
+  height: 100% !important;
+  background: linear-gradient(gainsboro,gold );
+}
+
+body {
+  background: radial-gradient(circle at 33.4314575051% 29.2893218813%, currentcolor calc(23.4314575051% + -.5px), transparent calc(23.4314575051% + .5px)), radial-gradient(circle at 66.5685424949% 29.2893218813%, currentcolor calc(23.4314575051% + -.5px), transparent calc(23.4314575051% + .5px)), conic-gradient(from -45deg at 50% 33.1370849898%, currentcolor 90deg, transparent 0%) 0 calc(3.6686291501em + -1px);
+  background-size: 8em 8em;
+  color: rgba(255, 0, 0, 0.664);
+  display: flex;
+  height: 100%;
+}
+h1{
+  font-size: 150px;
+  color: black;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}

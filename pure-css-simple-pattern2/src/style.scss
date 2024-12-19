@@ -1,0 +1,31 @@
+@use 'sass:math';
+
+$d: 8em; // background-size
+$f: .8; // heart in box relative sizing (at 1, hearts touch)
+
+// computed stuff
+$rb: 100%/(2 + math.sqrt(2));
+$rs: $f*$rb;
+$dx: $rs/math.sqrt(2);
+$dy: $rb + $dx;
+
+html {
+	display: grid;
+	height: 100%;
+	background: linear-gradient(violet, gainsboro);
+}
+
+body {
+	background: 
+		radial-gradient(circle at 50% - $dx $rb, 
+			currentcolor calc(#{$rs} + -.5px), 
+			transparent calc(#{$rs} + .5px)), 
+		radial-gradient(circle at 50% + $dx $rb, 
+			currentcolor calc(#{$rs} + -.5px), 
+			transparent calc(#{$rs} + .5px)), 
+		conic-gradient(from -45deg at 50% 2*$dx, 
+			currentcolor 90deg, transparent 0%) 0 calc(#{$dy/100%*$d} + -1px);
+	background-size: $d $d;
+	height: 100%;
+	color: crimson
+}
