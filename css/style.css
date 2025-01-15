@@ -1,0 +1,130 @@
+.hr {
+	/* border-color: #D2D6DE; */
+	border-bottom:#D2D6DE 2px solid !important;
+	margin-bottom: 15px;
+}
+
+
+th {
+	text-align: center;
+}
+
+.opciones {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start; /* Asegura que los enlaces no se estiren */
+}
+
+.opciones a {
+	display: inline;
+	font-size: 14px;
+	padding-right: 2px;
+	margin-bottom: 10px;
+}
+
+.opciones a i {
+	font-size: 16px;
+	/*background-color: #eee;*/
+	padding: 4px;
+	-webkit-transition: all .5s ease;
+  	-moz-transition: all .5s ease;
+  	-o-transition: all .5s ease;
+  	transition: all .5s ease;
+}
+
+.herramientas.editar {
+	color:#138496;
+}
+
+.herramientas.ver {
+	color:green;
+}
+
+.herramientas.baja {
+	color:orange;	
+}
+
+.herramientas.activar {
+	color:grey;
+}
+
+.herramientas.borrar {
+	color:red;
+}
+
+/* Efecto hover para el enlace */
+.herramientas:hover {
+	color: grey; /* Cambia el color del enlace al pasar el ratón (ajusta según necesites) */
+  }
+
+.herramientas i {
+	transition: transform 0.3s ease; /* Transición suave para la transformación */
+}
+
+  /* Efecto hover para el ícono dentro del enlace */
+.herramientas:hover i {
+	transform: scale(1.2); /* Agranda el ícono al 120% de su tamaño original */
+}
+
+.clipboard {
+	color:#555;
+}
+
+.clipboard:hover {
+	color: #333;
+}
+
+.tipoTabla {
+	padding: 2px 0px 2px 12px !important;
+	margin-bottom: 0px;
+
+}
+
+.media-body {
+	/*max-width: 50px !important;*/
+	/*text-align: justify;*/
+	word-wrap: break-word !important;
+	/*overflow: hidden;*/
+}
+
+.badge-danger.navbar-badge {
+	font-size: 11px;
+	font-weight: bold;
+}
+
+.badge-warning.navbar-badge {
+	font-size: 11px;
+	font-weight: bold;
+}
+
+.fc-day-grid-event .fc-content {
+   white-space: normal; 
+}
+
+.fc-day-number {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.toast {
+    min-width: 300px !important;
+
+}
+.icon-edit{
+	cursor: pointer;
+	margin-left: 10px;
+}
+
+caption {
+    caption-side: top; /* para mostrar el caption arribad e la tabla como una titulo*/
+	text-align: center;
+}
+fieldset{
+	background-color: whitesmoke;
+	box-shadow: 1px 1px 3px 2px #333;
+}
+legend{
+	padding-left: 10px;
+	font-weight: 700;
+
+}
