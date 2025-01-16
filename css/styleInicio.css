@@ -1,0 +1,98 @@
+/* General Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;  /* Fondo neutro */
+}
+
+/* Contenedor principal */
+.contenedor {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;  /* Asegura que los elementos se ajusten en pantallas pequeñas */
+    width: 100%;
+    max-width: 1200px;  /* Limita el ancho máximo para una mejor presentación */
+    gap: 20px;  /* Espaciado entre los cards */
+    padding: 20px;
+}
+
+/* Estilo de cada card */
+.card {
+    border: 1px solid #ddd;  /* Borde más suave */
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 400px;  /* Limita el ancho máximo */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Agrega sombra suave para profundidad */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-10px);  /* Efecto de elevación al hacer hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);  /* Aumenta la sombra al pasar el ratón */
+}
+
+/* Título de cada card */
+.card .title {
+    background-color: #333;  /* Fondo oscuro para el título */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* Imagen dentro de cada card */
+.card .img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.card .img img {
+    width: 80%;
+    height: auto;
+    border-radius: 8px;  /* Redondea las esquinas de la imagen */
+}
+
+/* Texto de la descripción */
+.card .text {
+    background-color: #f9f9f9;
+    padding: 15px;
+    color: #333;
+    font-size: 1rem;
+    text-align: center;
+    flex-grow: 1;  /* Para asegurar que el texto se expanda */
+}
+
+/* Media Queries - Ajuste para pantallas pequeñas */
+@media (max-width: 600px) {
+    .contenedor {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;  /* Las tarjetas ocuparán más espacio en pantallas pequeñas */
+        max-width: none;
+    }
+
+    .card .title {
+        font-size: 1.25rem;  /* Ajusta el tamaño de fuente para el título */
+    }
+
+    .card .text {
+        font-size: 0.95rem;  /* Ajusta el tamaño de fuente del texto */
+    }
+}

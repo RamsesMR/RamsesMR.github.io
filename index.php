@@ -1,91 +1,69 @@
-<?php
-require_once('config.php');
-
-// if(!$_SESSION['user'] || $_SESSION['user'] == "") {
-//     header("location:login.php");
-//     exit;
-// }
-
-if($_GET['logout'] === "true") {
-    session_destroy();
-    header("location:index.php");
-    exit;
-}
-
-?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-
-    <title>CRM Prácticas 1.0</title>
-
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="recursos/fontawesome-free/css/all.min.css">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="recursos/adminlte/css/adminlte.min.css">
-    <!-- Google Font: Source Sans Pro -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-    <!-- DataTables -->
-    <link rel="stylesheet" href="recursos/datatables-bs4/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="recursos/datatables-responsive/css/responsive.bootstrap4.min.css">
-    <!-- SweetAlert2 -->
-    <link rel="stylesheet" href="recursos/sweetalert2/sweetalert2.min.css">
-    <!-- iCheck for checkboxes and radio inputs -->
-  <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-    <!-- Select2 -->
-    <link rel="stylesheet" href="recursos/select2/css/select2.min.css">
-    <link rel="stylesheet" href="recursos/select2-bootstrap4-theme/select2-bootstrap4.min.css">
-    <!-- jQuery UI -->
-    <link rel="stylesheet" type="text/css" href="recursos/jquery-ui-1.12.1/jquery-ui.min.css"/>
-    <!-- ElFInder -->
-    <link rel="stylesheet" href="recursos/elFinder-2.1.55/css/elfinder.min.css">
-        <!-- CSS Albertemus -->
-    <link rel="stylesheet" href="css/style.css">
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- boostrap -->
+    <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- mi css -->
+    <link rel="stylesheet" href="css/styleInicio.css">
+    <title>Portal del empleo</title>
 </head>
-<body class="hold-transition sidebar-mini"> <!-- layout-footer-fixed -->
 
-    <!-- MODAL -->
+<body>
 
-    <div class="modal fade" id="modal-lg">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title"></h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body"></div>
+    <div class="contenedor">
 
-                <div class="modal-footer justify-content-between"></div>
+        <div class="card" id="busquedaEmpleo">
+            <div class="title">
+                <h2>Buscar empleo</h2>
+            </div>
+
+            <div class="img">
+                <img src="img/cv1.avif" alt="Curriculum">
+            </div>
+
+            <div class="text">
+                <p>Encuentra las mejores ofertas laborales adaptadas a tu perfil y comienza tu búsqueda de empleo hoy mismo.</p>
             </div>
         </div>
+
+        <div class="card" id="ofertaEmpleo">
+            <div class="title">
+                <h2>Publicar Oferta</h2>
+            </div>
+
+            <div class="img">
+                <img src="img/cv1.avif" alt="Oferta de empleo">
+            </div>
+
+            <div class="text">
+                <p>Publica tus vacantes fácilmente y encuentra a los candidatos ideales para tu empresa.</p>
+            </div>
+        </div>
+
     </div>
 
-    <!-- FIN MODAL -->
+    <!-- Bootstrap (si lo necesitas) -->
+    <script src="recursos/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+</body>
 
-    <div class="wrapper">
-        <?php
-        require_once(INC.'navbar.php');
-        require_once(INC.'aside.php'); 
-        ?>
-        <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper">
-        <?php
+<script>
 
+    document.getElementById("busquedaEmpleo").addEventListener("click", ()=>{
 
-        if($_GET['m'] && $_GET['m'] != "") {
-            incluye($_GET['m']);
-        }
-        else {
-            
-            incluye('inicio');    
-            
-        }
+        window.location.href="inicio.php?m=busqueda&op=ver";
 
-        require(INC.'footer.php');  
+    })
+
+    document.getElementById("ofertaEmpleo").addEventListener("click", ()=>{
+
+        window.location.href="inicio.php?m=oferta&op=crear";
+
+    })
+
+</script>
+
+</html>

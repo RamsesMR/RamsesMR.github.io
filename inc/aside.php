@@ -21,138 +21,152 @@
 
         <!-- Sidebar Menu -->
         <nav class="mt-2">
-            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                <!-- Add icons to the links using the .nav-icon class
-                with font-awesome or any other icon font library -->
+
+            
+
+       
+
+            <?php
+
+       //menu para demandantes de empleo   
+
+            if (isset($_GET['m']) && $_GET['m'] == "busqueda") {
+            ?>
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+                    <li class="nav-item has-treeview menu-close">
+
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-user-tie"></i>
+                            <p>
+                               Empleo
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+
+                        <ul class="nav nav-treeview">
+
+
+
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Ver ofertas</p>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Mi currículum</p>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                        <!-- menu 2 -->
+
+                    <li class="nav-item has-treeview menu-close">
+
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-user-tie"></i>
+                            <p>
+                                Preguntas frecuentes
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+
+                        <ul class="nav nav-treeview">
+
+
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>como creo un cv</p>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+                <?php
+            }
+                ?>
+                </ul>
+
+
+
+                <!-- este es para los que entren en OFERTAS empleo -->
 
                 <?php
-                //MENU PARA SUPER ADMINISTRADORES Y ADMINISTRADORES 
-                if ($_SESSION['tipo_user'] < 3) {
+
+                if (isset($_GET['m']) && $_GET['m'] == "oferta") {
                 ?>
 
-                    <li class="nav-item has-treeview menu-close">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <li class="nav-item has-treeview menu-close">
 
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-user-tie"></i>
-                            <p>
-                                Menu 1
-                                <i class="right fas fa-angle-left"></i>
-                            </p>
-                        </a>
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-user-tie"></i>
+                                <p>
+                                Gestión de empleado
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
 
-                        <ul class="nav nav-treeview">
-
-
-                            <li class="nav-item">
-                                <a href="?m=tipo-nota" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Tipos de Nota</p>
-                                </a>
-                            </li>
+                            <ul class="nav nav-treeview">
 
 
-                            <li class="nav-item">
-                                <a href="?m=tipo_documentos" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Tipos de Documentos</p>
-                                </a>
-                            </li>
 
-                            <li class="nav-item">
-                                <a href="?m=familias" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Familias Formativas</p>
-                                </a>
-                            </li>
-                            
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Buscar candidatos</p>
+                                    </a>
+                                </li>
 
-                            <li class="nav-item">
-                                <a href="?m=usuarios" class="nav-link">
-                                    <i class="nav-icon fas fa-users"></i>
-                                    <p>
-                                        Usuarios
-                                        <!-- <span class="right badge badge-danger">New</span> -->
-                                    </p>
-                                </a>
-                            </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Publicar oferta</p>
+                                    </a>
+                                </li>
 
-                            <li class="nav-item">
-                                <a href="?m=tipo-usuarios" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Tipo Usuarios</p>
-                                </a>
-                            </li>
+                            </ul>
 
-                        </ul>
 
-                    </li>
+                            <!-- menu 2 -->
+
+                        <li class="nav-item has-treeview menu-close">
+
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-user-tie"></i>
+                                <p>
+                                     Preguntas frecuentes
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+
+                            <ul class="nav nav-treeview">
+
+
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>¿Cómo creo una oferta?</p>
+                                    </a>
+                                </li>
 
 
 
 
-                    <!-- menu 2 -->
-                    <li class="nav-item has-treeview menu-close">
+                            </ul>
 
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-user-tie"></i>
-                            <p>
-                                Menu 2
-                                <i class="right fas fa-angle-left"></i>
-                            </p>
-                        </a>
-
-                        <ul class="nav nav-treeview">
-
-
-                            <li class="nav-item">
-                                <a href="?m=tipo-nota" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Tipos de Nota</p>
-                                </a>
-                            </li>
-
-
-                            <li class="nav-item">
-                                <a href="?m=tipo_documentos" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Tipos de Documentos</p>
-                                </a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="?m=familias" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Familias Formativas</p>
-                                </a>
-                            </li>
-                            
-
-                            <li class="nav-item">
-                                <a href="?m=usuarios" class="nav-link">
-                                    <i class="nav-icon fas fa-users"></i>
-                                    <p>
-                                        Usuarios
-                                        <!-- <span class="right badge badge-danger">New</span> -->
-                                    </p>
-                                </a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="?m=tipo-usuarios" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Tipo Usuarios</p>
-                                </a>
-                            </li>
-
-                        </ul>
-
-                    </li>
-                <?php
+                        </li>
+                    <?php
                 }
-?>
-        </ul>
-
-
+                    ?>
+                    </ul>
 
 
 
