@@ -34,24 +34,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 
 		$link = conexion();
 
-		$sql = "SELECT * FROM usuarios WHERE (login = '".$login."' AND pass = '".$pass."') ";
+		$sql = "SELECT * FROM empresas WHERE (usuario = '".$login."' AND pass = '".$pass."') ";
 
 		$result = mysqli_query($link, $sql);
 		if($result && mysqli_num_rows($result) > 0) {
 
 			$row = mysqli_fetch_assoc($result);
 
-			$_SESSION['user'] = $row['login'];
-			$_SESSION['nom_user'] = $row['nombre'];
-			$_SESSION['id_user'] = $row['id'];
-			$_SESSION['tipo_user'] = $row['tipo'];
+			$_SESSION['user'] = $row['usuario'];
+			$_SESSION['id_empresa'] = $row['id'];
+			$_SESSION['nombre_empresa'] = $row['nombre'];
+      $_SESSION['cantidad_ofertas'] = $row['cantidad_ofertas'];
      
     
       $fue = date("Y-m-d H:i:s");
 
-      mysqli_query($link, "UPDATE usuarios SET fue = '".$fue."' WHERE id = '".$row['id']."' LIMIT 1 ");
+      mysqli_query($link, "UPDATE empresas SET fua_login = '".$fue."' WHERE id = '".$row['id']."' LIMIT 1 ");
 
-			header("location:index.php");
+			header("location:inicio.php?m=oferta&op=ver");
 			exit;
 
 		} 
@@ -97,6 +97,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     </script> -->
 </head>
 <body class="login-page" style="min-height: 512.391px;">
+
+<div class="container text-center mt-5" style="position: absolute; top: 0;">
+        <!-- Botón para volver a la página de inicio -->
+        <a href="/" class="btn btn-primary">
+            <i class="bi bi-house-fill"></i> Volver a Inicio
+        </a>
+    </div>
+
+
 <div class="login-box">
   <div class="login-logo">
     <b>Portal del empleo</b>

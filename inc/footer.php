@@ -56,8 +56,8 @@
 <!-- date-range-picker -->
 <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
 <!-- Albertemus JS -->
-<script src="js/crmpracticas.js"></script>
+<script src="js/ajax/puentes.js"></script>
 <!-- Albertemus JS -->
-<script src="js/files.js"></script>
+<script src="js/funciones/funciones.js"></script>
 </body>
 </html>

@@ -123,4 +123,146 @@ function mes($numero)
 	return $mes;
 }
 
+function dameComunidadAutonoma(){
+
+	
+
+
+	$link = conexion();
+
+	
+	
+
+	$datos = "";
+
+		$sql = "SELECT * FROM comunidades_autonomas";
+	
+	$result = mysqli_query($link, $sql);
+	$datos .= '<option value="">Seleccione una opción</option>';
+	if ($result) {
+		while ($row = mysqli_fetch_assoc($result)) {
+		
+			
+				$datos .= '<option value="' . $row['id'] . '">' . $row['nombre'] . '</option>';
+		
+
+		}
+		return $datos;
+	} else {
+		return '<option value="">Error al obtener especialidades</option>';
+	}
+
+
+}
+
+function dameDato($tabla, $campo, $id)
+{
+	$link = conexion();
+	$sql = "SELECT * FROM " . $tabla . " WHERE id = '" . $id . "' ";
+	$result = mysqli_query($link, $sql);
+	if ($result) {
+		$row = mysqli_fetch_assoc($result);
+		$dato = $row[$campo];
+		return $dato;
+	} else {
+		return "Error";
+	}
+
+	mysqli_close($link);
+}
+
+
+function dameProvincias($id){
+
+	
+
+
+	$link = conexion();
+
+	
+	
+
+	$datos = "";
+
+		$sql = "SELECT * FROM provincias where comunidad_autonoma_id = $id";
+	
+	$result = mysqli_query($link, $sql);
+
+	$datos .= '<option value="">Seleccione una opción</option>';
+	
+	if ($result) {
+		while ($row = mysqli_fetch_assoc($result)) {
+		
+			
+				$datos .= '<option value="' . $row['id'] . '">' . $row['nombre'] . '</option>';
+		
+
+		}
+		return $datos;
+	} else {
+		return '<option value="">Error al obtener especialidades</option>';
+	}
+
+
+}
+
+
+function dameOfertas(){
+
+	$link=conexion();
+
+	$sql="SELECT * FROM ofertas WHERE 1=1";
+	$resultado=mysqli_query($link,$sql);
+
+
+	while ($row = mysqli_fetch_assoc($resultado)) {
+		// Añadir el nombre de la tabla (tabla_origen) a cada fila
+		$respuesta[] = $row;
+	}
+
+	return $respuesta;
+}
+
+function dameMisOfertas(){
+
+	$link=conexion();
+
+	$sql="SELECT o.*
+	FROM ofertas o 
+	JOIN empresas_ofertas oe ON oe.id_empresa = o.id_empresa 
+	WHERE 1=1";
+
+
+
+	$resultado=mysqli_query($link,$sql);
+
+
+	while ($row = mysqli_fetch_assoc($resultado)) {
+		// Añadir el nombre de la tabla (tabla_origen) a cada fila
+		$respuesta[] = $row;
+	}
+
+	return $respuesta;
+
+
+
+}
+
+function dameCv(){
+
+	$link=conexion();
+
+	$sql="SELECT * FROM cv WHERE 1=1";
+	$resultado=mysqli_query($link,$sql);
+
+
+	while ($row = mysqli_fetch_assoc($resultado)) {
+		// Añadir el nombre de la tabla (tabla_origen) a cada fila
+		$respuesta[] = $row;
+	}
+
+	return $respuesta;
+}
+
+
 ?>

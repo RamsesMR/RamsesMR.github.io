@@ -1,16 +1,16 @@
 <?php
 require_once('config.php');
 
-// if(!$_SESSION['user'] || $_SESSION['user'] == "") {
-//     header("location:login.php");
-//     exit;
-// }
+if((!$_SESSION['user'] || $_SESSION['user'] == "") && $_GET['m'] == "oferta") {
+    header("location:login.php");
+    exit;
+}
 
-// if($_GET['logout'] === "true") {
-//     session_destroy();
-//     header("location:index.php");
-//     exit;
-// }
+if($_GET['logout'] === "true") {
+    session_destroy();
+    header("location:login.php");
+    exit;
+}
 
 ?>
 <!DOCTYPE html>

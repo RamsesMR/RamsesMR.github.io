@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -8,6 +11,7 @@
     <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
     <!-- mi css -->
     <link rel="stylesheet" href="css/styleInicio.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Portal del empleo</title>
 </head>
 
@@ -60,7 +64,7 @@
 
     document.getElementById("ofertaEmpleo").addEventListener("click", ()=>{
 
-        window.location.href="inicio.php?m=oferta&op=crear";
+        window.location.href="inicio.php?m=oferta&op=ver";
 
     })
 
