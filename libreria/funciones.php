@@ -174,13 +174,7 @@ function dameDato($tabla, $campo, $id)
 
 function dameProvincias($id){
 
-	
-
-
 	$link = conexion();
-
-	
-	
 
 	$datos = "";
 
@@ -223,14 +217,11 @@ function dameOfertas(){
 	return $respuesta;
 }
 
-function dameMisOfertas(){
+function dameMisOfertasActivas($id,$activo,$limited, $off){
 
 	$link=conexion();
 
-	$sql="SELECT o.*
-	FROM ofertas o 
-	JOIN empresas_ofertas oe ON oe.id_empresa = o.id_empresa 
-	WHERE 1=1";
+	$sql="SELECT * FROM ofertas where id_empresa = $id AND activo = $activo ORDER BY fecha_alta DESC LIMIT $limited OFFSET $off";
 
 
 
@@ -244,8 +235,24 @@ function dameMisOfertas(){
 
 	return $respuesta;
 
+}
 
+function contarOfertas($id, $activo) {
+    $link = conexion(); // Conexión a la base de datos
 
+    // Consulta SQL para contar las ofertas
+    $sql = "SELECT COUNT(*) as total FROM ofertas WHERE id_empresa = $id AND activo = $activo";
+
+    $resultado = mysqli_query($link, $sql); // Ejecutar la consulta
+
+    // Verificar si la consulta obtuvo resultados
+    if ($resultado) {
+        $fila = mysqli_fetch_assoc($resultado); // Obtener la fila del resultado
+        return $fila['total']; // Retornar el valor de la columna 'total'
+    } else {
+        return 0; // En caso de error, retornar 0
+    }
+	
 }
 
 function dameCv(){

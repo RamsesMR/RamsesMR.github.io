@@ -64,7 +64,7 @@
 
     document.getElementById("ofertaEmpleo").addEventListener("click", ()=>{
 
-        window.location.href="inicio.php?m=oferta&op=ver";
+        window.location.href="inicio.php?m=oferta&op=gestion";
 
     })
 

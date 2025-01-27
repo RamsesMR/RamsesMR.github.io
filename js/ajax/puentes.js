@@ -24,7 +24,8 @@ function daleValorInputComunidadesProvincias() {
         .then(response => response.json())  
         .then(data => {
             // console.log("Respuesta del servidor:", data); // Ver la respuesta
-
+			
+			
             const selectElement = document.getElementById("provincia");
 		
 			  
@@ -32,8 +33,8 @@ function daleValorInputComunidadesProvincias() {
 
 			//aqui se le da los valores correspondiente a los option de los select con las especialidades si es ef o cp
            
-			
-            selectElement.innerHTML += data.data;  // Actualizamos las opciones del select
+			selectElement.innerHTML="";
+            selectElement.innerHTML = data.data;  // Actualizamos las opciones del select
 			
 
 

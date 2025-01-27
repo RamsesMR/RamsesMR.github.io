@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 
       mysqli_query($link, "UPDATE empresas SET fua_login = '".$fue."' WHERE id = '".$row['id']."' LIMIT 1 ");
 
-			header("location:inicio.php?m=oferta&op=ver");
+			header("location:inicio.php?m=oferta&op=gestion");
 			exit;
 
 		} 

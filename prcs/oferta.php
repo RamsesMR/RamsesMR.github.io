@@ -37,8 +37,9 @@ switch($op){
 			$jornada=$_POST['jornada'] ? $_POST['jornada'] : NULL;
 			$modalidad=$_POST['modalidad'] ? $_POST['modalidad'] : NULL;
 			$contrato=$_POST['contrato'] ? $_POST['contrato'] : NULL;
+			$idEmpresa=$_POST['id_empresa'];
 
-			$sql="INSERT INTO ofertas (`empresa`,`area_laboral`,`provincia`,`titulo`,`contrato`,`modalidad`,`jornada`,`salario_min`,`salario_max`,`descripcion`,`descripcion_corta`) VALUES ('$empresa','$area_laboral','$provincia','$titulo','$contrato','$modalidad','$jornada','$salarioMin','$salarioMax','$descripcion','$descripcionCorta')";
+			$sql="INSERT INTO ofertas (`empresa`,`area_laboral`,`provincia`,`titulo`,`contrato`,`modalidad`,`jornada`,`salario_min`,`salario_max`,`descripcion`,`descripcion_corta`, `id_empresa`) VALUES ('$empresa','$area_laboral','$provincia','$titulo','$contrato','$modalidad','$jornada','$salarioMin','$salarioMax','$descripcion','$descripcionCorta','$idEmpresa')";
 
 			$resultado=mysqli_query($link,$sql);
 
